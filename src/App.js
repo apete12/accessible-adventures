@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react'
+import parksData from './components/dummyData';
+// import { fetchParks } from './api-calls';
+import AllParks from './components/AllParks/AllParks';
+
 
 function App() {
+const [allParks, setAllParks] = useState([])
+
+useEffect(() => {
+  setAllParks(parksData.data)
+  // fetchParks()
+  // .then(data => {
+    // setAllParks(data.data)
+    // console.log(data)
+  // })
+  // .catch(error => {
+    // console.log(`Request failed - ${error.message}`)
+  // })
+}, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AllParks allParks={allParks}/>
   );
 }
 
