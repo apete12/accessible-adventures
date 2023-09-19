@@ -1,0 +1,7 @@
+.park-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid black 1px;
+    width: 15rem;
+}
