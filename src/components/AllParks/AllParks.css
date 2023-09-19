@@ -1,4 +1,4 @@
-.parks-container {
+.all-parks-container {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
