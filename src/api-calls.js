@@ -1,5 +1,5 @@
 const fetchParks = () => {
-    return fetch('https://developer.nps.gov/api/v1/parks?parks?limit=500&api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU')
+    return fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU')
     .then(response => {
         if(response.ok) {
             return response.json()
