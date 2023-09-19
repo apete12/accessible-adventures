@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import parksData from './components/dummyData';
 import AllParks from './components/AllParks/AllParks'
+import Header from './components/Header/Header';
 
 function App() {
   const [allParks, setAllParks] = useState([])
@@ -10,7 +11,14 @@ function App() {
     setAllParks(parksData.data)
   }, [])
 
-  return <AllParks allParks={allParks} />
+  return (
+  <>
+    <Header/>
+    <AllParks allParks={allParks} />
+  </>
+  
+  
+  )
 }
 
 export default App
