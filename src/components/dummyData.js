@@ -4649,3 +4649,101 @@ const parksData = {
         }]}
 
 export default parksData
+
+const accessibilityData = {
+    total: "471",
+    limit: "",
+    start: "0",
+    data: [
+    [
+        {
+            "id": "A1B0AD01-740C-41E7-8412-FBBEDD5F1443",
+            "name": "ATM/Cash Machine",
+            "parks": [
+                {
+                    "states": "SD",
+                    "designation": "National Park",
+                    "parkCode": "badl",
+                    "fullName": "Badlands National Park",
+                    "places": [
+                        {
+                            "title": "Cedar Pass Lodge",
+                            "id": "5C566C36-F3C7-4CFA-A35C-9086329851B9",
+                            "url": "https://www.nps.gov/places/cedar-pass-lodge.htm"
+                        }
+                    ],
+                    "url": "http://www.nps.gov/badl/",
+                    "name": "Badlands"
+                },
+                {
+                    "states": "TX",
+                    "designation": "National Park",
+                    "parkCode": "bibe",
+                    "fullName": "Big Bend National Park",
+                    "places": [
+                        {
+                            "title": "Study Butte and Terlingua",
+                            "id": "CD4C8274-1C47-4A75-BD3C-EA44406AADBE",
+                            "url": "https://www.nps.gov/places/study-butte-and-terlingua.htm"
+                        },
+                        {
+                            "title": "Chisos Mountains Lodge",
+                            "id": "0776DBE9-4A28-4DD1-A745-80D114FD09DE",
+                            "url": "https://www.nps.gov/places/chisos-lodge.htm"
+                        },
+                        {
+                            "title": "Rio Grande Village Store",
+                            "id": "B2FEBCC4-F387-4297-97ED-83164844B502",
+                            "url": "https://www.nps.gov/places/rio-grande-village-store.htm"
+                        },
+                        {
+                            "title": "Panther Junction Service Station",
+                            "id": "A216B05A-5D03-4849-A22E-2EBA088463BB",
+                            "url": "https://www.nps.gov/places/panther-junction-service-station.htm"
+                        }
+                    ],
+                    "url": "http://www.nps.gov/bibe/",
+                    "name": "Big Bend"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "id": "4E4D076A-6866-46C8-A28B-A129E2B8F3DB",
+            "name": "Accessible Rooms",
+            "parks": [
+                {
+                    "states": "KY",
+                    "designation": "National Historical Park",
+                    "parkCode": "abli",
+                    "fullName": "Abraham Lincoln Birthplace National Historical Park",
+                    "places": [
+                        {
+                            "title": "Lincoln Tavern",
+                            "id": "D5265572-4FD7-4078-A73E-F9B13956C5E5",
+                            "url": "https://www.nps.gov/places/lincoln-tavern.htm"
+                        }
+                    ],
+                    "url": "http://www.nps.gov/abli/",
+                    "name": "Abraham Lincoln Birthplace"
+                },
+                {
+                    "states": "UT",
+                    "designation": "National Park",
+                    "parkCode": "zion",
+                    "fullName": "Zion National Park",
+                    "places": [
+                        {
+                            "title": "Zion Human History Museum",
+                            "id": "6E8678F7-171F-43EA-9507-AA5F7713A775",
+                            "url": "https://www.nps.gov/places/zion-human-history-museum.htm"
+                        }
+                    ],
+                    "url": "http://www.nps.gov/zion/",
+                    "name": "Zion"
+                }
+            ]
+        }
+    ]
+]}
