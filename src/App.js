@@ -25,7 +25,6 @@ function App() {
         .then(data => {
           setAllParks(filterAllParks(accessibleFeatures, data.data))
 
-          console.log(allParks)
         })
         .catch(error => {
           console.log(`Request failed - ${error.message}`)
@@ -45,6 +44,7 @@ function App() {
       <Header />
       {selectedSinglePark ? (
         <SinglePark
+          accessibleFeatures={accessibleFeatures}
           selectedSinglePark={selectedSinglePark}
           returnAllParks={returnAllParks}
         />
