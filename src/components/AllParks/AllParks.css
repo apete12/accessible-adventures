@@ -2,7 +2,8 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    column-gap: 15px;
+    row-gap: 70px;
     margin-bottom: 20px;
     margin-top: 20px;
   }
