@@ -30,7 +30,6 @@ function App() {
       <SinglePark selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks}/>
       ) : (
       <AllParks allParks={allParks} selectSinglePark={selectSinglePark} /> )}
-      
     </>
   )
 }
