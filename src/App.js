@@ -13,9 +13,11 @@ function App() {
   const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
 
   useEffect(() => {
+    
     getAccessibleFeatures()
 
   }, [])
+
 
   const getAccessibleFeatures = () => {
     setAccessibleFeatures(filterAccessibleAmenities(accessibilityData))
@@ -35,6 +37,7 @@ function App() {
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
+
   return (
     <>
       <Header />
