@@ -1,6 +1,6 @@
 import './SinglePark.css'
 
-const SinglePark = ({ selectedSinglePark, returnAllParks }) => {
+const SinglePark = ({ selectedSinglePark, returnAllParks, singleParkAccessibility }) => {
   return (
     <div className='single-park-container'>
       <div className='return-btn-container'>
@@ -9,7 +9,7 @@ const SinglePark = ({ selectedSinglePark, returnAllParks }) => {
       <div className='single-park-info-container'>
         <div className='styling-container'>
           <h2>{selectedSinglePark.fullName}</h2>
-          <img src={selectedSinglePark.images[0].url}/>
+          <img src={selectedSinglePark.images[0].url} alt={selectedSinglePark.images[0].altText}/>
           <div className='styling-container-two'>
             <h3>{selectedSinglePark.states}</h3>
             <h3>{selectedSinglePark.designation}</h3>

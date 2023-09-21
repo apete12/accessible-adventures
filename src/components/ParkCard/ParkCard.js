@@ -2,7 +2,7 @@ import './ParkCard.css'
 
 const ParkCard = (props) => {
 return (
-    <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.id)}>
+    <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.name)}>
       <div className='image-container'>
         <img src={props.image}/>
       </div>

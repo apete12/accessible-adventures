@@ -46,27 +46,15 @@ const filterAccessibleAmenities = amenityList => {
   return amenitiesByPark
 };
 
-
 const filterAllParks = (accessibleParks, allParks) => {
    let accessibleParksList = Object.keys(accessibleParks)
 
     const accessParks = allParks.filter((park) => {
         return accessibleParksList.includes(park.fullName)
     })
-
     return accessParks
-
 }
 
 
 
-
-
 export { filterAccessibleAmenities, filterAllParks }
-
-// iterate over the list of amenities
-// access each amentity array
-// if the array name includes: accessible, assistive, elevator, etc.
-// access the park lists
-// push the park list to a key name with an empty array
-// push the amenity to the value array

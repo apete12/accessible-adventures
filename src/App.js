@@ -10,6 +10,7 @@ function App() {
   const [allParks, setAllParks] = useState([])
   const [accessibleFeatures, setAccessibleFeatures] = useState([])
   const [selectedSinglePark, setSelectedSinglePark] = useState('')
+  const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
 
   useEffect(() => {
     fetchAmenities()
@@ -24,27 +25,30 @@ function App() {
       fetchParks()
         .then(data => {
           setAllParks(filterAllParks(accessibleFeatures, data.data))
-
         })
         .catch(error => {
           console.log(`Request failed - ${error.message}`)
         })
     }
-  }, [])
+  }, [accessibleFeatures])
 
-  const selectSinglePark = id => {
-    let singlePark = allParks.find(park => park.id === id)
+  const selectSinglePark = (parkFullName) => {
+   let singlePark = allParks.find(park => park.fullName === parkFullName)
     setSelectedSinglePark(singlePark)
+
+    let singleParkAmenities = accessibleFeatures[parkFullName]
+    setSingleParkAccessibility(singleParkAmenities)
   }
+
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
   return (
     <>
       <Header />
-      {selectedSinglePark ? (
+      {selectedSinglePark && singleParkAccessibility ? (
         <SinglePark
-          accessibleFeatures={accessibleFeatures}
+          singleParkAccessibility={singleParkAccessibility}
           selectedSinglePark={selectedSinglePark}
           returnAllParks={returnAllParks}
         />
