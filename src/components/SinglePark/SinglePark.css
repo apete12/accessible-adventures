@@ -6,15 +6,16 @@
 
 .single-park-info-container img {
     display: flex;
-    width: 25em;
+    width: 20em;
 }
 
 .single-park-info-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
     width: 100vw;
-    margin-top: .2em;
+    margin-top: 1em;
 }
 
 .single-park-info-container h2{
@@ -35,11 +36,72 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 600px;
+    height: 500px;
     border: solid .1em black;
-    background: black;
+    background: rgb(1, 43, 1);
     color: white;
     padding: 1em;
+}
+
+.accessibility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 600px;
+    height: 500px;
+    border: solid .1em black;
+    background: rgb(1, 43, 1);
+    color: white;
+    padding: 1em;
+}
+
+.accessibility-container h2{
+    margin-bottom: 15px;
+}
+
+.features-styling-container{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    font-size: 1.2rem;
+}
+
+.feature-wrapper div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin: 0px;
+}
+.feature-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin: 0px;
+}
+
+.feature-wrapper p{
+    margin: 0px;
+}
+
+
+.features-styling-container img{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .5em;
+}
+
+.features-buttons-styling-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
 }
 
 .styling-container-two{
@@ -56,9 +118,12 @@
     height: 3em;
 }
 
+.accessibility-support,
+.favorite-park,
 .return-all-parks {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 2em;
     font-family: 'Aleo', sans-serif;
     font-size: 1em;

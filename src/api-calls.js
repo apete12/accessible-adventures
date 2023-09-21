@@ -20,6 +20,4 @@ const fetchParks = () => {
     })
 }
 
-
-
 export { fetchParks, fetchAmenities }
