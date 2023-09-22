@@ -1,11 +1,12 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { filterAccessibleAmenities, filterAllParks } from './utilities'
-import AllParks from './components/AllParks/AllParks'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
 import Loading from './components/Loading/Loading'
+import AllParks from './components/AllParks/AllParks'
 
 
 function App() {
@@ -52,22 +53,24 @@ function App() {
   return (
     <>
        <Header /> 
-       {isLoading ? ( 
-        <Loading />
-      ) : selectedSinglePark && singleParkAccessibility ? (
-        <SinglePark
-          singleParkAccessibility={singleParkAccessibility}
-          selectedSinglePark={selectedSinglePark}
-          returnAllParks={returnAllParks}
-        />
-      ) : (
-        <AllParks allParks={allParks} selectSinglePark={selectSinglePark} />
-      )}
+       {isLoading && <Loading />}
+       <Routes>
+        <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
+        <Route path="park/:id" element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks}/>}/>
+        <Route path='*' element={<Error error={error}/>}/>
+      </Routes>
   </>
   )
 }
 export default App
-
+   
+   
+      // <Routes>
+        {/* {/* <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/> */} 
+        {/* <Route path="/:id" element={<PetDetails allPets={allPets} setError={setError}/>}/> */}
+        {/* <Route path='*' element={<Error error={error}/>}/> */}
+      {/* </Routes> */}
+      // {error && <Error error={error} />}
 
 // import './App.css'
 // import { useState, useEffect } from 'react'
@@ -125,6 +128,21 @@ export default App
 // }
 // export default App
 // 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
