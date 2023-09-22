@@ -52,6 +52,12 @@ const filterAllParks = (accessibleParks, allParks) => {
     const accessParks = allParks.filter((park) => {
         return accessibleParksList.includes(park.fullName)
     })
+    // let trimmedParkData = accessParks.reduce((object, park) => {
+
+
+      // return object
+    // })
+
     return accessParks
 }
 

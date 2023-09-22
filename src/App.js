@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
 import Loading from './components/Loading/Loading'
 import AllParks from './components/AllParks/AllParks'
+import AllFavorites from './components/AllFavorites/AllFavorites'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [selectedSinglePark, setSelectedSinglePark] = useState('')
   const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [savedParks, setSavedParks] = useState([])
   
   useEffect(() => {
     const fetchData = async () => {
@@ -47,20 +49,25 @@ function App() {
     setSingleParkAccessibility(singleParkAmenities)
     setIsLoading(false)
   }
-
+  
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
+  
   return (
     <>
-       <Header /> 
+       <Header returnAllParks={returnAllParks}/> 
        {isLoading && <Loading />}
        <Routes>
         <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
           path="/:name" 
-          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} />}
+          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
+         <Route 
+            path="/saved-parks" 
+            element={ <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
+         />
       </Routes>
   </>
   )

@@ -1,10 +1,25 @@
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    padding-left: 2em;
     background-color: white;
     height: 8em;
+    width: 100%;
+    margin-bottom: 5em;
+    margin-top: 1em;
+  }
+
+  .title-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: black;
   }
 
   .ally-logo{
@@ -18,10 +33,34 @@
     font-family: 'Aleo', sans-serif;
   }
   
-  .header h2 {
+  .return-btn-container{
     display: flex;
-    padding-left: 5px;
-    margin: 0px;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5em;
+    background: black;
+    width: 20%;
+    height: 3em;
+    font-size: 1.2em;
   }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+}
+
+  .active {
+    border: solid .01em white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3em;
+  }
+  
