@@ -14,10 +14,13 @@ import seating from '../../images/seating.png'
 
 import { Link } from 'react-router-dom'
 
-
-const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility, setSavedParks}) => {
-
-  
+const SinglePark = ({
+  selectedSinglePark,
+  returnAllParks,
+  singleParkAccessibility,
+  setSavedParks,
+  savedParks
+}) => {
   const getAccessibilityIcon = name => {
     switch (name) {
       case 'Assistive Listening Systems':
@@ -55,27 +58,31 @@ const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility
     }
   }
 
-const helperSavePark = (park) => {
-  setSavedParks(park)
-}
-
+  const helperSavePark = park => {
+    setSavedParks([...savedParks, park])
+  }
 
   return (
     <div className='single-park-container'>
       <div className='return-btn-container'>
-       <Link to={`/`} onClick={returnAllParks} className='return-all-parks'>
+        <Link to={`/`} onClick={returnAllParks} className='return-all-parks'>
           {/* <button className='return-all-parks' onClick={returnAllParks}> */}
-            All to All Parks
+           All Parks
+          {/* </button> */}
+        </Link>
+        <Link to={`/saved-parks`} onClick={returnAllParks} className='return-all-parks'>
+          {/* <button className='return-all-parks' onClick={returnAllParks}> */}
+          Favorite Parks
           {/* </button> */}
         </Link>
       </div>
       <div className='single-park-info-container'>
         <div className='styling-container'>
           <h2>{selectedSinglePark.fullName}</h2>
-          <img
-            src={selectedSinglePark.images[0].url}
-            alt={selectedSinglePark.images[0].altText}
-          />
+        
+        
+        
+        
           <div className='styling-container-two'>
             <h3>{selectedSinglePark.states}</h3>
             <h3>{selectedSinglePark.designation}</h3>
@@ -99,12 +106,20 @@ const helperSavePark = (park) => {
           </div>
           <div className='features-buttons-styling-container'>
             {/* <Link to={`/`} className='favorite-park' onClick={savePark(selectedSinglePark)}> */}
-              <button className='favorite-park' onClick={event => helperSavePark(selectedSinglePark)}>Add Park to Favorites!</button>
-              {/* Add Park to Favorites! */}
+            <button
+              className='favorite-park'
+              onClick={event => helperSavePark(selectedSinglePark)}
+            >
+              Add Park to Favorites!
+            </button>
+            {/* Add Park to Favorites! */}
             {/* </Link> */}
-            <Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support'>
+            <Link
+              to={`https://www.nps.gov/aboutus/accessibility.htm`}
+              className='accessibility-support'
+            >
               {/* <button className='accessibility-support'> */}
-                National Park Service Accessibility Support
+              National Park Service Accessibility Support
               {/* </button> */}
             </Link>
           </div>

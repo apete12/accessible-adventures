@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
 import Loading from './components/Loading/Loading'
 import AllParks from './components/AllParks/AllParks'
+import AllFavorites from './components/AllFavorites/AllFavorites'
 
 
 function App() {
@@ -61,8 +62,12 @@ function App() {
         <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
           path="/:name" 
-          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks}/>}
+          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
+         <Route 
+            path="/saved-parks" 
+            element={ <AllFavorites savedParks={savedParks}/>}
+         />
       </Routes>
   </>
   )
