@@ -1,7 +1,7 @@
 import './AllFavorites.css'
 import ParkCard from '../ParkCard/ParkCard'
 
-const AllFavorites = ({ savedParks }) => {
+const AllFavorites = ({ savedParks, selectSinglePark }) => {
     console.log(savedParks)
   const parks = savedParks.map(natPark => {
     return (
@@ -11,6 +11,8 @@ const AllFavorites = ({ savedParks }) => {
         name={natPark.fullName}
         state={natPark.states}
         image={natPark.images[0].url}
+        selectSinglePark={selectSinglePark}
+
       />
     )
   })

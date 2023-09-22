@@ -66,7 +66,7 @@ function App() {
         />
          <Route 
             path="/saved-parks" 
-            element={ <AllFavorites savedParks={savedParks}/>}
+            element={ <AllFavorites savedParks={savedParks} selectSinglePark={selectSinglePark}/>}
          />
       </Routes>
   </>
