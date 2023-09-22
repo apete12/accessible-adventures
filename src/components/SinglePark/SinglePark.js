@@ -12,11 +12,11 @@ import outlet from '../../images/outlet.png'
 import site from '../../images/site.png'
 import seating from '../../images/seating.png'
 
-const SinglePark = ({
-  selectedSinglePark,
-  returnAllParks,
-  singleParkAccessibility
-}) => {
+import { Link } from 'react-router-dom'
+
+
+const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility}) => {
+
   const getAccessibilityIcon = name => {
     switch (name) {
       case 'Assistive Listening Systems':
@@ -57,9 +57,11 @@ const SinglePark = ({
   return (
     <div className='single-park-container'>
       <div className='return-btn-container'>
-        <button className='return-all-parks' onClick={returnAllParks}>
-          All to All Parks
-        </button>
+       <Link to={`/`} onClick={returnAllParks} className='return-all-parks'>
+          {/* <button className='return-all-parks' onClick={returnAllParks}> */}
+            All to All Parks
+          {/* </button> */}
+        </Link>
       </div>
       <div className='single-park-info-container'>
         <div className='styling-container'>
@@ -74,7 +76,6 @@ const SinglePark = ({
           </div>
           <p>{selectedSinglePark.description}</p>
         </div>
-
         <div className='accessibility-container'>
           <h2>Park's Accessible Features</h2>
           <div className='features-styling-container'>
@@ -91,10 +92,15 @@ const SinglePark = ({
             ))}
           </div>
           <div className='features-buttons-styling-container'>
-            <button className='favorite-park'>Add Park to Favorites!</button>
-            <button className='accessibility-support'>
-              National Park Service Accessibility Support
-            </button>
+            <Link to={`/`} className='favorite-park'>
+              {/* <button className='favorite-park'>Add Park to Favorites!</button> */}
+              Add Park to Favorites!
+            </Link>
+            <Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support'>
+              {/* <button className='accessibility-support'> */}
+                National Park Service Accessibility Support
+              {/* </button> */}
+            </Link>
           </div>
         </div>
       </div>

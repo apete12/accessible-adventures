@@ -1,11 +1,12 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import { filterAccessibleAmenities, filterAllParks } from './utilities'
-import AllParks from './components/AllParks/AllParks'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
 import Loading from './components/Loading/Loading'
+import AllParks from './components/AllParks/AllParks'
 
 
 function App() {
@@ -39,11 +40,12 @@ function App() {
   
 
   const selectSinglePark = (parkFullName) => {
-   let singlePark = allParks.find(park => park.fullName === parkFullName)
+    let singlePark = allParks.find(park => park.fullName == parkFullName)
     setSelectedSinglePark(singlePark)
 
     let singleParkAmenities = accessibleFeatures[parkFullName]
     setSingleParkAccessibility(singleParkAmenities)
+    setIsLoading(false)
   }
 
   const returnAllParks = () => {
@@ -52,181 +54,15 @@ function App() {
   return (
     <>
        <Header /> 
-       {isLoading ? ( 
-        <Loading />
-      ) : selectedSinglePark && singleParkAccessibility ? (
-        <SinglePark
-          singleParkAccessibility={singleParkAccessibility}
-          selectedSinglePark={selectedSinglePark}
-          returnAllParks={returnAllParks}
+       {isLoading && <Loading />}
+       <Routes>
+        <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
+        <Route 
+          path="/:name" 
+          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} />}
         />
-      ) : (
-        <AllParks allParks={allParks} selectSinglePark={selectSinglePark} />
-      )}
+      </Routes>
   </>
   )
 }
 export default App
-
-
-// import './App.css'
-// import { useState, useEffect } from 'react'
-// import { filterAccessibleAmenities, filterAllParks } from './utilities'
-// import {parksData, accessibilityData } from './dummyData'
-// import AllParks from './components/AllParks/AllParks'
-// import Header from './components/Header/Header'
-// import SinglePark from './components/SinglePark/SinglePark'
-// 
-// function App() {
-  // const [allParks, setAllParks] = useState([])
-  // const [accessibleFeatures, setAccessibleFeatures] = useState({})
-  // const [selectedSinglePark, setSelectedSinglePark] = useState('')
-  // const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
-// 
-  // useEffect(() => {
-// 
-    // getAccessibleFeatures()
-// 
-  // }, [])
-// 
-  // const getAccessibleFeatures = () => {
-    // setAccessibleFeatures(filterAccessibleAmenities(accessibilityData))
-    // if (accessibleFeatures) {
-      // setAllParks(filterAllParks(accessibleFeatures, parksData.data))
-    // }
-  // }
-// 
-  // const selectSinglePark = (parkFullName) => {
-  //  let singlePark = allParks.find(park => park.fullName === parkFullName)
-    // setSelectedSinglePark(singlePark)
-// 
-    // let singleParkAmenities = accessibleFeatures[parkFullName]
-    // setSingleParkAccessibility(singleParkAmenities)
-  // }
-// 
-  // const returnAllParks = () => {
-    // setSelectedSinglePark('')
-  // }
-// 
-  // return (
-    // <>
-      {/* <Header /> */}
-      {/* {selectedSinglePark && singleParkAccessibility ? ( */}
-        // <SinglePark
-          // singleParkAccessibility={singleParkAccessibility}
-          // selectedSinglePark={selectedSinglePark}
-          // returnAllParks={returnAllParks}
-        // />
-      // ) : (
-        // <AllParks allParks={allParks} selectSinglePark={selectSinglePark} />
-      // )}
-    {/* </> */}
-  // )
-// }
-// export default App
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
