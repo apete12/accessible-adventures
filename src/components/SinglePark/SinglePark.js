@@ -15,8 +15,9 @@ import seating from '../../images/seating.png'
 import { Link } from 'react-router-dom'
 
 
-const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility}) => {
+const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility, setSavedParks}) => {
 
+  
   const getAccessibilityIcon = name => {
     switch (name) {
       case 'Assistive Listening Systems':
@@ -53,6 +54,11 @@ const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility
         return null
     }
   }
+
+const helperSavePark = (park) => {
+  setSavedParks(park)
+}
+
 
   return (
     <div className='single-park-container'>
@@ -92,10 +98,10 @@ const SinglePark = ({selectedSinglePark, returnAllParks, singleParkAccessibility
             ))}
           </div>
           <div className='features-buttons-styling-container'>
-            <Link to={`/`} className='favorite-park'>
-              {/* <button className='favorite-park'>Add Park to Favorites!</button> */}
-              Add Park to Favorites!
-            </Link>
+            {/* <Link to={`/`} className='favorite-park' onClick={savePark(selectedSinglePark)}> */}
+              <button className='favorite-park' onClick={event => helperSavePark(selectedSinglePark)}>Add Park to Favorites!</button>
+              {/* Add Park to Favorites! */}
+            {/* </Link> */}
             <Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support'>
               {/* <button className='accessibility-support'> */}
                 National Park Service Accessibility Support

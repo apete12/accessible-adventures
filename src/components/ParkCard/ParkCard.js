@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ParkCard = (props) => {
 return (
- <Link to={`/${props.name}`} key={props.id}>
+ <Link to={`/${props.name}`}>
     <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.name)}>
       <div className='image-container'>
         <img src={props.image}/>

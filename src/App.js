@@ -15,6 +15,7 @@ function App() {
   const [selectedSinglePark, setSelectedSinglePark] = useState('')
   const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [savedParks, setSavedParks] = useState([])
   
   useEffect(() => {
     const fetchData = async () => {
@@ -47,10 +48,11 @@ function App() {
     setSingleParkAccessibility(singleParkAmenities)
     setIsLoading(false)
   }
-
+  
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
+
   return (
     <>
        <Header /> 
@@ -59,7 +61,7 @@ function App() {
         <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
           path="/:name" 
-          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} />}
+          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks}/>}
         />
       </Routes>
   </>
