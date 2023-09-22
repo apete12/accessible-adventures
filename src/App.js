@@ -53,7 +53,7 @@ function App() {
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
-
+  
   return (
     <>
        <Header returnAllParks={returnAllParks}/> 
@@ -66,7 +66,7 @@ function App() {
         />
          <Route 
             path="/saved-parks" 
-            element={ <AllFavorites savedParks={savedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
+            element={ <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
       </Routes>
   </>

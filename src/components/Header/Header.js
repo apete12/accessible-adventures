@@ -1,6 +1,6 @@
 import './Header.css'
 import logo from '../../images/logo.png'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = ({returnAllParks}) => {
   return (
@@ -15,10 +15,10 @@ const Header = ({returnAllParks}) => {
       </div>
       <div className='nav-wrapper'>
         <div className='return-btn-container'>
-          <NavLink to={`/`} onClick={returnAllParks} className='return-all-parks'>
+          <NavLink to={`/`} onClick={returnAllParks} className='nav-link'>
             All Parks
           </NavLink>
-          <NavLink to={`/saved-parks`} onClick={returnAllParks} className='return-all-parks'>
+          <NavLink to={`/saved-parks`} onClick={returnAllParks} className='nav-link'>
             Favorite Parks
           </NavLink>
         </div>

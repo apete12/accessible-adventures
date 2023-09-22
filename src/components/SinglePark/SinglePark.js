@@ -88,22 +88,11 @@ const SinglePark = ({
             ))}
           </div>
           <div className='features-buttons-styling-container'>
-            {/* <Link to={`/`} className='favorite-park' onClick={savePark(selectedSinglePark)}> */}
-            <button
-              className='favorite-park'
-              onClick={event => helperSavePark(selectedSinglePark)}
-            >
-              Add Park to Favorites!
+            <button className='favorite-park-btn'onClick={event => helperSavePark(selectedSinglePark)}>
+            ⭐️ Add Park to Favorites!
             </button>
-            {/* Add Park to Favorites! */}
-            {/* </Link> */}
-            <Link
-              to={`https://www.nps.gov/aboutus/accessibility.htm`}
-              className='accessibility-support'
-            >
-              {/* <button className='accessibility-support'> */}
-              National Park Service Accessibility Support
-              {/* </button> */}
+            <Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support'>
+            National Park Service Accessibility Support
             </Link>
           </div>
         </div>
