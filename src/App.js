@@ -5,34 +5,16 @@ import AllParks from './components/AllParks/AllParks'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
+import Loading from './components/Loading/Loading'
+
 
 function App() {
   const [allParks, setAllParks] = useState([])
   const [accessibleFeatures, setAccessibleFeatures] = useState([])
   const [selectedSinglePark, setSelectedSinglePark] = useState('')
   const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
-  const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-    // fetchAmenities()
-      // .then(data => {
-        // setAccessibleFeatures(filterAccessibleAmenities(data))
-      // })
-      // .catch(error => {
-        // console.log(`Request failed - ${error.message}`)
-      // })
-
-    // if (accessibleFeatures) {
-      // fetchParks()
-        // .then(data => {
-          // setAllParks(filterAllParks(accessibleFeatures, data.data))
-        // })
-        // .catch(error => {
-          // console.log(`Request failed - ${error.message}`)
-        // })
-    // }
-  // }, [accessibleFeatures])
-
+  const [isLoading, setIsLoading] = useState(true)
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -71,7 +53,7 @@ function App() {
     <>
        <Header /> 
        {isLoading ? ( 
-        <div>Loading...</div>
+        <Loading />
       ) : selectedSinglePark && singleParkAccessibility ? (
         <SinglePark
           singleParkAccessibility={singleParkAccessibility}

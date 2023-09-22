@@ -1,0 +1,11 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    width: 100% vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.ally-logo-loading {
+    width: 15em;
+}
