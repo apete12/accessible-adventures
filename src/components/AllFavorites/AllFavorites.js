@@ -1,12 +1,12 @@
 import './AllFavorites.css'
-import ParkCard from '../ParkCard/ParkCard'
+import FavoriteCard from '../FavoriteCard/FavoriteCard'
 
 
 const AllFavorites = ({ savedParks, selectSinglePark }) => {
-    console.log(savedParks)
+
   const parks = savedParks.map(natPark => {
     return (
-      <ParkCard
+      <FavoriteCard
         key={natPark.id}
         id={natPark.id}
         name={natPark.fullName}
@@ -16,7 +16,14 @@ const AllFavorites = ({ savedParks, selectSinglePark }) => {
       />
     )
   })
-  return <div className='all-parks-container'>{parks}</div>
+  return (
+    <div className='favorite-parks-container'>
+      <h2>Your Favorite Parks</h2>
+      <div className='all-parks-container'>
+        {parks}
+      </div>
+    </div>
+  )
 }
 
 export default AllFavorites

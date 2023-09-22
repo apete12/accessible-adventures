@@ -47,3 +47,13 @@
     justify-content: space-between;
     font-size: 1.2em;
   }
+
+  .active {
+    border: solid .01em white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3em;
+  }
+  
