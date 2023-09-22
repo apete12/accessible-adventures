@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { filterAccessibleAmenities, filterAllParks } from './utilities'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
@@ -40,11 +40,12 @@ function App() {
   
 
   const selectSinglePark = (parkFullName) => {
-   let singlePark = allParks.find(park => park.fullName === parkFullName)
+    let singlePark = allParks.find(park => park.fullName == parkFullName)
     setSelectedSinglePark(singlePark)
 
     let singleParkAmenities = accessibleFeatures[parkFullName]
     setSingleParkAccessibility(singleParkAmenities)
+    setIsLoading(false)
   }
 
   const returnAllParks = () => {
@@ -56,195 +57,12 @@ function App() {
        {isLoading && <Loading />}
        <Routes>
         <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
-        <Route path="park/:id" element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks}/>}/>
-        <Route path='*' element={<Error error={error}/>}/>
+        <Route 
+          path="/:name" 
+          element={<SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} />}
+        />
       </Routes>
   </>
   )
 }
 export default App
-   
-   
-      // <Routes>
-        {/* {/* <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/> */} 
-        {/* <Route path="/:id" element={<PetDetails allPets={allPets} setError={setError}/>}/> */}
-        {/* <Route path='*' element={<Error error={error}/>}/> */}
-      {/* </Routes> */}
-      // {error && <Error error={error} />}
-
-// import './App.css'
-// import { useState, useEffect } from 'react'
-// import { filterAccessibleAmenities, filterAllParks } from './utilities'
-// import {parksData, accessibilityData } from './dummyData'
-// import AllParks from './components/AllParks/AllParks'
-// import Header from './components/Header/Header'
-// import SinglePark from './components/SinglePark/SinglePark'
-// 
-// function App() {
-  // const [allParks, setAllParks] = useState([])
-  // const [accessibleFeatures, setAccessibleFeatures] = useState({})
-  // const [selectedSinglePark, setSelectedSinglePark] = useState('')
-  // const [singleParkAccessibility, setSingleParkAccessibility] = useState([])
-// 
-  // useEffect(() => {
-// 
-    // getAccessibleFeatures()
-// 
-  // }, [])
-// 
-  // const getAccessibleFeatures = () => {
-    // setAccessibleFeatures(filterAccessibleAmenities(accessibilityData))
-    // if (accessibleFeatures) {
-      // setAllParks(filterAllParks(accessibleFeatures, parksData.data))
-    // }
-  // }
-// 
-  // const selectSinglePark = (parkFullName) => {
-  //  let singlePark = allParks.find(park => park.fullName === parkFullName)
-    // setSelectedSinglePark(singlePark)
-// 
-    // let singleParkAmenities = accessibleFeatures[parkFullName]
-    // setSingleParkAccessibility(singleParkAmenities)
-  // }
-// 
-  // const returnAllParks = () => {
-    // setSelectedSinglePark('')
-  // }
-// 
-  // return (
-    // <>
-      {/* <Header /> */}
-      {/* {selectedSinglePark && singleParkAccessibility ? ( */}
-        // <SinglePark
-          // singleParkAccessibility={singleParkAccessibility}
-          // selectedSinglePark={selectedSinglePark}
-          // returnAllParks={returnAllParks}
-        // />
-      // ) : (
-        // <AllParks allParks={allParks} selectSinglePark={selectSinglePark} />
-      // )}
-    {/* </> */}
-  // )
-// }
-// export default App
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
