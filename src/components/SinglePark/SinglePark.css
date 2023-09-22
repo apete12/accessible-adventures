@@ -4,7 +4,7 @@
     width: 100vw;
 }
 
-.single-park-info-container img {
+#park-image {
     display: flex;
     width: 20em;
 }

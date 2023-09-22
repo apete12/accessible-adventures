@@ -52,15 +52,17 @@ const filterAllParks = (accessibleParks, allParks) => {
     const accessParks = allParks.filter((park) => {
         return accessibleParksList.includes(park.fullName)
     })
-    // let trimmedParkData = accessParks.reduce((object, park) => {
-
-
-      // return object
-    // })
 
     return accessParks
 }
 
+const trimParkData = (allParks) => {
+  const reducedData = allParks.map(park => {
+      const { id, fullName, url, states, description, images, } = park;
+      return { id, fullName, url, states, description, images: images[0] };
+  });
+  return reducedData;
+}
 
 
-export { filterAccessibleAmenities, filterAllParks }
+export { filterAccessibleAmenities, filterAllParks, trimParkData }

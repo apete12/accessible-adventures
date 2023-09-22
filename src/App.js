@@ -1,7 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom';
-import { filterAccessibleAmenities, filterAllParks } from './utilities'
+import { filterAccessibleAmenities, filterAllParks, trimParkData } from './utilities'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
 import SinglePark from './components/SinglePark/SinglePark'
@@ -29,7 +29,8 @@ function App() {
         if (filteredAmenities) {
           const parksData = await fetchParks();
           const filteredParks = filterAllParks(filteredAmenities, parksData.data);
-          setAllParks(filteredParks);
+          const trimmedParkData = trimParkData(filteredParks)
+          setAllParks(trimmedParkData);
         }
       } catch (error) {
         console.log(`Request failed - ${error.message}`);

@@ -17,8 +17,8 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
         id={natPark.id}
         name={natPark.fullName}
         state={natPark.states}
-        image={natPark.images[0].url}
-        altText={natPark.images[0].altText}
+        altText={natPark.images.altText}
+        image={natPark.images.url}
         selectSinglePark={selectSinglePark}
         helperDeletePark={helperDeletePark}
       />
