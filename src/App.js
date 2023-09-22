@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-       <Header /> 
+       <Header returnAllParks={returnAllParks}/> 
        {isLoading && <Loading />}
        <Routes>
         <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
@@ -66,7 +66,7 @@ function App() {
         />
          <Route 
             path="/saved-parks" 
-            element={ <AllFavorites savedParks={savedParks} selectSinglePark={selectSinglePark}/>}
+            element={ <AllFavorites savedParks={savedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
       </Routes>
   </>

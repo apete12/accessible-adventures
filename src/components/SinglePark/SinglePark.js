@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom'
 
 const SinglePark = ({
   selectedSinglePark,
-  returnAllParks,
   singleParkAccessibility,
   setSavedParks,
   savedParks
@@ -64,25 +63,9 @@ const SinglePark = ({
 
   return (
     <div className='single-park-container'>
-      <div className='return-btn-container'>
-        <Link to={`/`} onClick={returnAllParks} className='return-all-parks'>
-          {/* <button className='return-all-parks' onClick={returnAllParks}> */}
-           All Parks
-          {/* </button> */}
-        </Link>
-        <Link to={`/saved-parks`} onClick={returnAllParks} className='return-all-parks'>
-          {/* <button className='return-all-parks' onClick={returnAllParks}> */}
-          Favorite Parks
-          {/* </button> */}
-        </Link>
-      </div>
       <div className='single-park-info-container'>
         <div className='styling-container'>
           <h2>{selectedSinglePark.fullName}</h2>
-        
-        
-        
-        
           <div className='styling-container-two'>
             <h3>{selectedSinglePark.states}</h3>
             <h3>{selectedSinglePark.designation}</h3>
