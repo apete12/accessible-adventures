@@ -6,7 +6,7 @@ return (
  <Link to={`/${props.name}`}>
     <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.name)}>
       <div className='image-container'>
-        <img src={props.image}/>
+        <img src={props.image} alt={props.altText}/>
       </div>
       <div className='info-container'>
         <h2>{props.name}</h2>

@@ -61,11 +61,16 @@ const SinglePark = ({
     setSavedParks([...savedParks, park])
   }
 
-  return (
+  return selectedSinglePark && (
     <div className='single-park-container'>
       <div className='single-park-info-container'>
         <div className='styling-container'>
           <h2>{selectedSinglePark.fullName}</h2>
+          <img
+            src={selectedSinglePark.images.url}
+            alt={selectedSinglePark.images.altText}
+            id='park-image'
+          />
           <div className='styling-container-two'>
             <h3>{selectedSinglePark.states}</h3>
             <h3>{selectedSinglePark.designation}</h3>
