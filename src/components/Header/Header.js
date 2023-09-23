@@ -15,7 +15,7 @@ const Header = ({returnAllParks}) => {
         </div>
       </div>
       <div className='nav-wrapper'>
-        <div className='return-btn-container'>
+        <div className='return-btn-container' id='return-btn-container'>
           <NavLink to={`/`} onClick={returnAllParks} className='nav-link'>
             All Parks
           </NavLink>
