@@ -19,7 +19,7 @@ const Header = ({returnAllParks}) => {
           <NavLink to={`/`} onClick={returnAllParks} className='nav-link'>
             All Parks
           </NavLink>
-          <NavLink to={`/saved-parks`} onClick={returnAllParks} className='nav-link'>
+          <NavLink to={`national-parks/saved-parks`} onClick={returnAllParks} className='nav-link'>
             Favorite Parks
           </NavLink>
         </div>

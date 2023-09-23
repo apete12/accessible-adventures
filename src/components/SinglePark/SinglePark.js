@@ -66,9 +66,22 @@ const SinglePark = ({
     }
   }
 
+  // const helperSavePark = park => {
+  //   setSavedParks([...savedParks, park])
+  //   console.log(savedParks)
+  // }
+
   const helperSavePark = park => {
-    setSavedParks([...savedParks, park])
-  }
+    const parkExists = savedParks.find(savedPark => savedPark.name === park.name);
+
+    if (!parkExists) {
+        setSavedParks([...savedParks, park]);
+        console.log(savedParks);
+    } else {
+        console.log(`Park ${park.name} already exists in savedParks`);
+        return
+    }
+}
 
   return selectedSinglePark && (
     <div className='single-park-container'>
