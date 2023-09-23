@@ -1,6 +1,7 @@
 import './Header.css'
 import logo from '../../images/logo.png'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const Header = ({returnAllParks}) => {
   return (
@@ -28,3 +29,7 @@ const Header = ({returnAllParks}) => {
 }
 
 export default Header
+
+Header.propTypes = {
+  returnAllParks: PropTypes.func
+};
