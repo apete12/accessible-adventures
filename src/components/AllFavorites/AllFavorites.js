@@ -1,5 +1,6 @@
 import './AllFavorites.css'
 import FavoriteCard from '../FavoriteCard/FavoriteCard'
+import PropTypes from 'prop-types';
 
 const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
 
@@ -42,3 +43,25 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
 }
 
 export default AllFavorites
+
+AllFavorites.propTypes = {
+    savedParks: PropTypes.arrayOf(
+      PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
+      states: PropTypes.string.isRequired,
+      images: PropTypes.objectOf(
+      PropTypes.shape({
+        altText: PropTypes.string.isRequired,
+        caption: PropTypes.string,
+        credit: PropTypes.string,
+        title: PropTypes.string,
+        url: PropTypes.string.isRequired,
+      })),
+      description: PropTypes.string.isRequired,
+      designation: PropTypes.string.isRequired,
+      url: PropTypes.string,
+    })),
+    selectSinglePark: PropTypes.func,
+    setSavedParks: PropTypes.func,
+}
