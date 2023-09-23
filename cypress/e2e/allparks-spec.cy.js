@@ -56,4 +56,11 @@ describe('Test Home Page with All Parks', () => {
       .should('contain', 'SD')
   });
 
+  // it('Should display error message with a 500 level error', () => {
+  //   cy.intercept('GET', 'https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU', {
+  //     statusCode: 500})
+  //     cy.get('.error > h2').contains('Request failed - Unable to retrieve contacts from server.')    
+  // })
+
+
 })
