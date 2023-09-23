@@ -10,16 +10,20 @@ describe('Test nav links', () => {
       fixture: 'amenitiesData.json'
     }).as('loadAmenities')
 
-    .visit('http://localhost:3000/')
+    .visit('http://localhost:3000/national-parks/saved-parks')
   });
 
-  it('Toggle between home and favorites', () => {
+  it('Visit favorites from home page', () => {
 
     cy.visit('http://localhost:3000/')
     cy.get('.nav-wrapper')
-    cy.get('[href="/saved-parks"]').click()
-    cy.visit('http://localhost:3000/favorites')
+    cy.get('[href="/national-parks/saved-parks"]').click()
+    cy.visit('http://localhost:3000/national-parks/saved-parks')
+  });
 
+    it('Visit home from favorites page', () => {
+
+    cy.url().should('eq', 'http://localhost:3000/national-parks/saved-parks')
     cy.get('.nav-wrapper')
     cy.get('[href="/"]').click()
     cy.visit('http://localhost:3000/')

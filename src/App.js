@@ -9,6 +9,7 @@ import Loading from './components/Loading/Loading'
 import AllParks from './components/AllParks/AllParks'
 import AllFavorites from './components/AllFavorites/AllFavorites'
 import Error from './components/Error/Error';
+import UrlError from './components/URL/UrlError';
 
 function App() {
   const [allParks, setAllParks] = useState([])
@@ -40,7 +41,7 @@ function App() {
           setAllParks(trimmedParkData);
         }
       } catch (error) {
-        setError(`Request failed - ${error.message}`);
+        setError(`${error.message}`);
       }
       setIsLoading(false);
     };
@@ -72,10 +73,10 @@ function App() {
           element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
          <Route 
-            path="/saved-parks" 
+            path="national-parks/saved-parks" 
             element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
-          <Route path='*' element={<Error error={error}/>}/>
+          <Route path='*' element={<UrlError/>}/>
       </Routes>
       {error && <Error error={error} />}
   </>

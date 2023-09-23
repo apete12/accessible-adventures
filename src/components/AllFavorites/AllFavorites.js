@@ -9,6 +9,7 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
       return park.fullName !== savedPark
     })
     setSavedParks(filteredFavorites)
+    console.log(savedParks)
   }   
 
   const parks = savedParks.map(natPark => {

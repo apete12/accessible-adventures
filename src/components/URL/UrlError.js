@@ -1,10 +1,10 @@
-import './Error.css'
+import './UrlError.css'
 import { Link } from 'react-router-dom'
 
-const Error = ({ error }) => {
+const UrlError = ( ) => {
   return (
     <div className='error-container'>
-      <h2 className='error'>{error}</h2>
+      <h2 className='error'>Oops! This page does not exist.</h2>
       <div className='retry'>
         <Link to='/'>Retry</Link>
       </div>
@@ -12,4 +12,4 @@ const Error = ({ error }) => {
   )
 }
 
-export default Error
+export default UrlError

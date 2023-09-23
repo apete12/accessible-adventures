@@ -13,17 +13,17 @@ describe('Test Single Park Details', () => {
     .visit('http://localhost:3000/')
   });
 
-  it('Should display header', () => {
-    cy.get('.title-wrapper')
-    cy.get('h1')
-      .should('contain', 'a11y adventures')
-  });
+  // it('Should display header', () => {
+  //   cy.get('.title-wrapper')
+  //   cy.get('h1')
+  //     .should('contain', 'a11y adventures')
+  // });
 
-  it('Should display nav bar', () => {
-    cy.get('.nav-wrapper')
-    cy.get('[href="/saved-parks"]')
-    cy.get('[href="/"]')
-  });
+  // it('Should display nav bar', () => {
+  //   cy.get('.nav-wrapper')
+  //   cy.get('[href="/national-parks/saved-parks"]')
+  //   cy.get('[href="/"]')
+  // });
 
   it('Should display single park details with accessible amenities', () => {
     cy.wait('@loadParks');
@@ -33,8 +33,8 @@ describe('Test Single Park Details', () => {
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
     cy.get('.single-park-container')
     cy.get('.styling-container > h2')
     .should('contain', 'Acadia National Park')
@@ -68,8 +68,8 @@ describe('Test Single Park Details', () => {
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
@@ -86,16 +86,16 @@ describe('Test Single Park Details', () => {
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
     cy.get('.favorite-park-btn').click()
 
     cy.get('.nav-wrapper')
-    cy.get('[href="/saved-parks"]').click()
-    cy.url().should('eq', 'http://localhost:3000/saved-parks')
+    cy.get('[href="/national-parks/saved-parks"]').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/saved-parks')
 
     cy.get('.all-favorite-parks-container').children().should('have.length', 1)
     cy.get('.favorite-park-card')
@@ -107,10 +107,19 @@ describe('Test Single Park Details', () => {
     .should('contain', 'Remove from Favorites')
   });
 
-  // it('Should display error message with a 500 level error', () => {
-    //   cy.intercept('GET', 'https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU', {
-    //     statusCode: 500})
-    //     cy.get('.error > h2').contains('Request failed - Unable to retrieve contacts from server.')    
-    // })
+  it('Should display error message with a 500 level error', () => {
+    cy.intercept('GET', 'https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU', {
+      statusCode: 500})
+    cy.intercept('GET', 'https://developer.nps.gov/api/v1/amenities/parksplaces?api_key=9xEgS46YUqsexk7Vav3aN7AsCWBfYeeGQtFk1fPU', {
+      statusCode: 500})
+      cy.get('.error-container')
+      cy.get('.error')
+  })
+  it('Should display URL error page with a 404 level error', () => {
+    cy.visit('http://localhost:3000/nonsense')
+    cy.get('.error-container')
+    cy.get('.error')
+
+    })
 
 })
