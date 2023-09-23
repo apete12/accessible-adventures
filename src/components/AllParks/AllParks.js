@@ -1,5 +1,6 @@
 import './AllParks.css'
 import ParkCard from '../ParkCard/ParkCard'
+import PropTypes from 'prop-types';
 
 const AllParks = ({ allParks, selectSinglePark }) => {
   const parks = allParks.map(natPark => {
@@ -11,7 +12,6 @@ const AllParks = ({ allParks, selectSinglePark }) => {
         state={natPark.states}
         altText={natPark.images.altText}
         image={natPark.images.url}
-
         selectSinglePark={selectSinglePark}
       />
     )
@@ -20,3 +20,15 @@ const AllParks = ({ allParks, selectSinglePark }) => {
 }
 
 export default AllParks
+
+
+AllParks.propTypes = {
+  allParks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
+      states: PropTypes.string.isRequired,
+      images: PropTypes.object,
+    })
+  )
+};
