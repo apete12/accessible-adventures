@@ -1,7 +1,9 @@
 import './ParkCard.css'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const ParkCard = (props) => {
+
 return (
  <Link to={`/${props.name}`}>
     <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.name)}>
@@ -18,3 +20,11 @@ return (
 }
 
 export default ParkCard
+
+ParkCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  images: PropTypes.object,
+  selectSinglePark: PropTypes.func.isRequired
+}
