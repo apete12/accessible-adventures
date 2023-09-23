@@ -58,8 +58,8 @@ const filterAllParks = (accessibleParks, allParks) => {
 
 const trimParkData = (allParks) => {
   const reducedData = allParks.map(park => {
-      const { id, fullName, url, states, description, images, } = park;
-      return { id, fullName, url, states, description, images: images[0] };
+      const { id, fullName, url, states, description, images, designation} = park;
+      return { id, fullName, url, states, description, images: images[0], designation};
   });
   return reducedData;
 }

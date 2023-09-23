@@ -40,7 +40,6 @@ function App() {
   
     fetchData();
   }, []);
-  
 
   const selectSinglePark = (parkFullName) => {
     let singlePark = allParks.find(park => park.fullName == parkFullName)
@@ -54,6 +53,8 @@ function App() {
   const returnAllParks = () => {
     setSelectedSinglePark('')
   }
+
+  console.log(savedParks)
   
   return (
     <>

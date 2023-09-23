@@ -1,6 +1,6 @@
 import './FavoriteCard.css'
 import deleteIcon from '../../images/delete.png'
-
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 
 const FavoriteCard = (props) => {
@@ -30,3 +30,11 @@ const FavoriteCard = (props) => {
 
 export default FavoriteCard
 
+FavoriteCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  image: PropTypes.object,
+  selectSinglePark: PropTypes.func.isRequired,
+  helperDeletePark: PropTypes.func.isRequired,
+}

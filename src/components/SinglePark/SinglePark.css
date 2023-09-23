@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100vw;
-    margin-top: 1em;
+    margin-top: .5em;
 }
 
 .single-park-info-container h2{
@@ -65,8 +65,8 @@
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
-    row-gap: 15px;
-    font-size: 1.2rem;
+    row-gap: 40px;
+    font-size: .9rem;
 }
 
 .feature-wrapper div{
