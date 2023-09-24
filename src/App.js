@@ -10,6 +10,8 @@ import AllParks from './components/AllParks/AllParks'
 import AllFavorites from './components/AllFavorites/AllFavorites'
 import Error from './components/Error/Error';
 import UrlError from './components/URL/UrlError';
+import Home from './components/Home/Home';
+
 
 function App() {
   const [allParks, setAllParks] = useState([])
@@ -69,7 +71,8 @@ function App() {
        <Header returnAllParks={returnAllParks}/> 
        {isLoading && <Loading />}
        <Routes>
-        <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
+        <Route path="/" element={!isLoading && <Home/>}/>
+        <Route path="/national-parks" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
           path="national-parks/:name" 
           element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
