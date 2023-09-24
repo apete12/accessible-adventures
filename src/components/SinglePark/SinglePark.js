@@ -127,21 +127,17 @@ const SinglePark = ({
 export default SinglePark
 
 SinglePark.propTypes = {
-  // selectedSinglePark: PropTypes.shape({
-      // id: PropTypes.string.isRequired,
-      // fullName: PropTypes.string.isRequired,
-      // states: PropTypes.string.isRequired,
-      // description: PropTypes.string,
-      // designation: PropTypes.string,
-      // url: PropTypes.string,
-      // images: PropTypes.shape({
-        // altText: PropTypes.string.isRequired,
-        // caption: PropTypes.string,
-      //   credit: PropTypes.string,
-      //   title: PropTypes.string,
-      //   url: PropTypes.string.isRequired,
-      // }),
-    // }),
+  selectedSinglePark: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      fullName: PropTypes.string.isRequired,
+      states: PropTypes.string.isRequired,
+      designation: PropTypes.string,
+      images: PropTypes.shape({
+        altText: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+    })),
     singleParkAccessibility: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
@@ -167,14 +163,9 @@ SinglePark.propTypes = {
       images: PropTypes.objectOf(
       PropTypes.shape({
         altText: PropTypes.string.isRequired,
-        caption: PropTypes.string,
-        credit: PropTypes.string,
-        title: PropTypes.string,
         url: PropTypes.string.isRequired,
       })),
       description: PropTypes.string.isRequired,
-      designation: PropTypes.string.isRequired,
-      url: PropTypes.string,
     }))
 }
 
