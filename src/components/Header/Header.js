@@ -1,6 +1,6 @@
 import './Header.css'
 import logo from '../../images/logo.png'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 const Header = ({returnAllParks}) => {
@@ -8,7 +8,9 @@ const Header = ({returnAllParks}) => {
     <header className='header'>
       <div className='title-wrapper'>
         <div className='logo-container'>
+          <Link to={`/`} onClick={returnAllParks} className='nav-link' id='return-home-link'>
           <img className='ally-logo' src={logo} alt='ally logo' />
+          </Link>
         </div>
         <div className='title-container'>
           <h1>a11y adventures</h1>

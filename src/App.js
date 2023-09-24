@@ -78,7 +78,7 @@ function App() {
           element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
          <Route 
-            path="national-parks/saved-parks" 
+            path="/saved-parks" 
             element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
           <Route path='*' element={<UrlError/>}/>

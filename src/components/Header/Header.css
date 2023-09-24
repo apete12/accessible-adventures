@@ -11,7 +11,9 @@
 
   .title-wrapper{
     display: flex;
+    align-items: center;
     flex-direction: row;
+    padding-left: 1.75em;
     width: 100%;
   }
 
@@ -65,9 +67,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-left: 1em;
-    padding-right: 1em; */
-
   }
   
 
