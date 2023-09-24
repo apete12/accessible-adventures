@@ -7,7 +7,7 @@ const FavoriteCard = (props) => {
 
   return (
   <div className='favorite-park-card-wrapper'>
-    <Link to={`/${props.name}`}>
+    <Link to={`/saved-parks/details/${props.name}`}>
        <div className='favorite-park-card' key={props.id}>
          <div className='image-container' onClick={() => props.selectSinglePark(props.name)}>
            <img src={props.image} alt={props.altText}/>
