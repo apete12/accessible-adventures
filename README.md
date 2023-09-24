@@ -40,7 +40,7 @@ See the deployed project [here]()
   | Description | Screenshot |
   |------------ | -----------|
   | <h3 align="center">Home Page | ![all-parks-view](https://github.com/apete12/accessible-adventures/assets/104571445/de2d57d8-9633-4d57-afae-06ee09d51fff)
-  | <h3 align="center">Individual Add/Delete Park | ![favorite-parks]("https://github.com/apete12/accessible-adventures/assets/104571445/22176e50-10a8-4a8b-b556-1962b862172e")
+  | <h3 align="center">Individual Add/Delete Park | ![favorite-parks](https://github.com/apete12/accessible-adventures/assets/104571445/22176e50-10a8-4a8b-b556-1962b862172e)
    | <h3 align="center">Park Details | ![single-park-details](https://github.com/apete12/accessible-adventures/assets/104571445/2937d2d8-951e-46ba-b443-82cab5bd45de)
 
   
