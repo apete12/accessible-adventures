@@ -7,14 +7,10 @@
 }
 
 .all-favorite-parks-container {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 15px;
-  row-gap: 70px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 6rem;
 }
 
 .favorite-parks-container h2 {
@@ -29,3 +25,103 @@
     font-family: 'Aleo', sans-serif;
   }
   
+  @media only screen and (max-width: 1370px) {
+    .favorite-parks-container {
+      margin-top: 2em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+        gap: 8rem;
+        margin-top: 1em;
+     
+    }
+  
+  }
+
+  @media only screen and (max-width: 1025px) {
+    .favorite-parks-container {
+      margin-top: 2em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+        gap: 3rem;
+        margin-top: 1em;
+     
+    }
+  
+  }
+
+  @media only screen and (max-width: 850px) {
+    .favorite-parks-container {
+      margin-top: 2em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+        gap: 6rem;
+        margin-top: 1em;
+     
+    }
+  
+  }
+
+  @media only screen and (max-width: 600px) {
+    .favorite-parks-container {
+      margin-top: 2em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+        gap: 2rem;
+        margin-top: 1em;
+     
+    }
+  
+  }
+
+  @media only screen and (max-width: 530px) {
+    .favorite-parks-container {
+      margin-top: 2em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+        gap: 5rem;
+        margin-top: 1em;
+     
+    }
+  
+  }
+
+  @media only screen and (max-width: 350px) {
+    .favorite-parks-container {
+      margin-top: -3em;
+    }
+
+    #all-favorite-parks-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+        gap: 5rem;
+        margin-top: 0em;
+    }
+
+    .favorite-parks-container h2 {
+      display: flex;
+      font-size: 1.2em;
+      font-family: 'Aleo', sans-serif;
+    }
+  
+  }

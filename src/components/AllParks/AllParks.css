@@ -1,9 +1,32 @@
 .all-parks-container {
     display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 15px;
-    row-gap: 70px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-items: center;
+    gap: 6rem;
+    margin-top: 5em;
+  }
+
+  @media only screen and (max-width: 1130px) {
+    .all-parks-container {
+      margin-top: 8em;
+    }
+  } 
+
+  @media only screen and (max-width: 570px) {
+    .all-parks-container {
+      margin-top: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    .all-parks-container {
+      margin-top: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    .all-parks-container {
+      margin-top: 2em;
+    }
+  
   }

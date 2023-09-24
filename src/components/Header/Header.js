@@ -15,11 +15,11 @@ const Header = ({returnAllParks}) => {
         </div>
       </div>
       <div className='nav-wrapper'>
-        <div className='return-btn-container'>
-          <NavLink to={`/`} onClick={returnAllParks} className='nav-link'>
+        <div className='return-btn-container' id='return-btn-container'>
+          <NavLink to={`/`} onClick={returnAllParks} className='nav-link' id='return-home-link'>
             All Parks
           </NavLink>
-          <NavLink to={`national-parks/saved-parks`} onClick={returnAllParks} className='nav-link'>
+          <NavLink to={`national-parks/saved-parks`} onClick={returnAllParks} className='nav-link' id='view-favorites-link'>
             Favorite Parks
           </NavLink>
         </div>
