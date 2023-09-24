@@ -19,7 +19,8 @@ describe('Test Home Page with All Parks', () => {
 
   it('should display nav bar', () => {
     cy.get('.nav-wrapper')
-    cy.get('[href="/national-parks/saved-parks"]')
+    cy.get('[href="/saved-parks"]')
+    cy.get('[href="/national-parks"]')
     cy.get('[href="/"]')
   });
 
