@@ -1,6 +1,5 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
-// import trail from '../../images/accessible-trail.png'
 
 const Home = () => {
   return (

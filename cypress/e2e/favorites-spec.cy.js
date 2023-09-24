@@ -17,12 +17,14 @@ describe('Test Single Park Details', () => {
     cy.wait('@loadParks');
     cy.wait('@loadAmenities');
 
-    cy.get('.all-parks-container')
+    cy.visit('http://localhost:3000/saved-parks')
+
+    cy.get('.all-favorite-parks-container')
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
     cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
+    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
@@ -33,7 +35,7 @@ describe('Test Single Park Details', () => {
   
     cy.wait('@loadParks')
     cy.wait('@loadAmenities')
-    cy.url().should('eq', 'http://localhost:3000/national-parks/saved-parks')
+    cy.url().should('eq', 'http://localhost:3000/saved-parks')
     cy.get('.all-favorite-parks-container').children().should('have.length', 1)
     cy.get('.favorite-park-card')
     cy.get('.image-container > img')
@@ -52,12 +54,13 @@ describe('Test Single Park Details', () => {
     cy.wait('@loadParks');
     cy.wait('@loadAmenities');
 
+    cy.visit('http://localhost:3000/saved-parks')
     cy.get('.all-parks-container')
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
+    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
   });
 
   it('Should display error message with a 500 level error', () => {

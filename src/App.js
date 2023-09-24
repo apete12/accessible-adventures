@@ -9,7 +9,7 @@ import Loading from './components/Loading/Loading'
 import AllParks from './components/AllParks/AllParks'
 import AllFavorites from './components/AllFavorites/AllFavorites'
 import Error from './components/Error/Error';
-import UrlError from './components/URL/UrlError';
+import UrlError from './components/UrlError/UrlError';
 import Home from './components/Home/Home';
 
 
@@ -24,10 +24,9 @@ function App() {
 
   const location = useLocation().pathname
 
-  console.log(savedParks)
-  
   useEffect(() => {
     setError('')
+    console.log(location)
   }, [location])
   
   useEffect(() => {
@@ -74,14 +73,18 @@ function App() {
         <Route path="/" element={!isLoading && <Home/>}/>
         <Route path="/national-parks" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
-          path="national-parks/:name" 
+          path="/national-parks/details/:name" 
           element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
-         <Route 
+        <Route 
             path="/saved-parks" 
             element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
-          <Route path='*' element={<UrlError/>}/>
+         <Route 
+            path="/saved-parks/details/:name" 
+            element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
+         />
+          <Route path="*" element={<UrlError/>}/>
       </Routes>
       {error && <Error error={error} />}
   </>

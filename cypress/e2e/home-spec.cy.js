@@ -56,7 +56,6 @@ describe('Test Home Page with All Parks', () => {
       statusCode: 500})
       cy.get('.error-container')
       cy.get('.error')
-      // .contains('Unable to retrieve contacts from server.')
   })
   
 
