@@ -24,7 +24,7 @@ npm start
 ```
 .....OR:
 
-See the deployed project [here]()
+See the deployed project [here](https://accessible-adventures.vercel.app/)
 
 
 ## 📚 Learning Goals
