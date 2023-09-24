@@ -21,6 +21,8 @@ function App() {
   const [error, setError] = useState('')
 
   const location = useLocation().pathname
+
+  console.log(savedParks)
   
   useEffect(() => {
     setError('')

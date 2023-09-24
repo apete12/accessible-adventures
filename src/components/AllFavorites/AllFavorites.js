@@ -9,7 +9,6 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
       return park.fullName !== savedPark
     })
     setSavedParks(filteredFavorites)
-    console.log(savedParks)
   }   
 
   const parks = savedParks.map(natPark => {
@@ -31,7 +30,7 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
     <div className='favorite-parks-container'>
       <h2>Your Favorite Parks</h2>
       {savedParks.length > 0 ? (
-        <div className='all-favorite-parks-container'>
+        <div className='all-favorite-parks-container' id='all-favorite-parks-container'>
           {parks}
         </div>
       ) : (

@@ -65,7 +65,7 @@
   }
   
 
-  @media only screen and (max-width: 11204px) {
+  @media only screen and (max-width: 1130px) {
     #return-btn-container{
       display: flex;
       align-items: center;
@@ -75,10 +75,10 @@
       height: 3em;
       font-size: 1.2em;
     }
-   
+
   } 
 
-  @media only screen and (max-width: 555px) {
+  @media only screen and (max-width: 570px) {
 
     .ally-logo{
       display: flex;
