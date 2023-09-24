@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Accessible Adventures 
+**Created by [Alex Peterson](https://www.linkedin.com/in/alexandra-peterson-245b65145/)**
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+## 📝 Description
 
-### `npm start`
+## 🧑‍💻 How To View This Front End Code In Action
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+# Clone this repo to your local machine by running:
+git clone git@github.com:apete12/accessible-adventures.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Cd into the root directory 
+cd accessible-adventures
 
-### `npm test`
+# Install dependencies 
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the start script
+npm start
+```
+.....OR:
 
-### `npm run build`
+See the deployed project [here]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📚 Learning Goals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Gain competency with React fundamentals
+- Test React components & asynchronous JS
+- Create a multi-page UX using Router that is responsive across various screen sizes
 
-### `npm run eject`
+## 📸 Screenshots
+<details open>
+  <summary> ⚙️ Functionality </summary>
+  
+  | Description | Screenshot |
+  |------------ | -----------|
+  | <h3 align="center">Home Page | ![all-parks-view](https://github.com/apete12/accessible-adventures/assets/104571445/de2d57d8-9633-4d57-afae-06ee09d51fff)
+  | <h3 align="center">Individual Add/Delete Park | ![favorite-parks]("https://github.com/apete12/accessible-adventures/assets/104571445/22176e50-10a8-4a8b-b556-1962b862172e")
+   | <h3 align="center">Park Details | ![single-park-details](https://github.com/apete12/accessible-adventures/assets/104571445/2937d2d8-951e-46ba-b443-82cab5bd45de)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💻 Technologies Used
+  
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript) 
+![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
+![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
+![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
+![Cypress](https://img.shields.io/badge/-Cypress-05122A?style=flat&logo=cypress)
+![React Router](https://img.shields.io/badge/-React_Router-05122A?style=flat&logo=reactrouter)
+![Cypress](https://img.shields.io/badge/-Express.js-05122A?style=flat&logo=expressjs)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 🧘‍♂️ Reflections
+<details open>
+  <summary> 🎉 Wins </summary>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  1. Successfully create responsive and accessible application
+  2. Implementing React Router
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>
+<details open>
+  <summary> 🤔 Challenges </summary>
+  
+  1. Implementing PropTypes with vast data sets
