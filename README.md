@@ -6,6 +6,7 @@
 </div>
 
 ## 📝 Description
+Accessible Adventures is a web application developed on the foundation of accessibility, and inclusivity.  Leveraging the National Park API, Accessible Adventures provides a platform to review and explore National Parks across the United States that offer accessible amenities. Users can mark their favorite parks, curating a personalized list for future adventures. Whether it's wheelchair accessibility, sensory-friendly zones, or other accessible features, Accessible Adventures aims to provide park goers with as much information as possible in order to facilitate an enjoyable, safe, and accessible adventure.
 
 ## 🧑‍💻 How To View This Front End Code In Action
 
