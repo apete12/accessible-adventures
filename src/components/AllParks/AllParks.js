@@ -16,7 +16,18 @@ const AllParks = ({ allParks, selectSinglePark }) => {
       />
     )
   })
-  return <div className='all-parks-container'>{parks}</div>
+  return (
+  <>
+    <div className='all-parks-header-container'>
+      <h2>a11y National Parks</h2>
+      <p>These National Parks have amenities related to accessibility. Happy adventuring!</p>
+    </div>
+    <div className='all-parks-container'>
+      {parks}
+    </div>
+  </>
+  
+  )
 }
 
 export default AllParks

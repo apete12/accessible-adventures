@@ -27,18 +27,22 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
   })
 
   return (
-    <div className='favorite-parks-container'>
-      <h2>Your Favorite Parks</h2>
-      {savedParks.length > 0 ? (
-        <div className='all-favorite-parks-container' id='all-favorite-parks-container'>
-          {parks}
-        </div>
-      ) : (
-        <div className='no-favorites-message'>
-          <p>You don't have any saved parks!</p>
-        </div>
+    <>
+      <div className='favorites-heading-container'>
+        <h2>Your Favorite Parks</h2>
+      </div>
+     <div className='favorite-parks-container'>
+        {savedParks.length > 0 ? (
+          <div className='all-favorite-parks-container' id='all-favorite-parks-container'>
+           {parks}
+          </div>
+       ) : (
+         <div className='no-favorites-message'>
+           <p>You don't have any saved parks!</p>
+         </div>
       )}
-    </div>
+      </div>
+  </>
   )
 }
 

@@ -7,16 +7,14 @@ const FavoriteCard = (props) => {
 
   return (
   <div className='favorite-park-card-wrapper'>
-    <Link to={`/saved-parks/details/${props.name}`}>
+    <Link to={`/saved-parks/${props.name}`} onClick={() => props.selectSinglePark(props.name)}>
        <div className='favorite-park-card' key={props.id}>
-         <div className='image-container' onClick={() => props.selectSinglePark(props.name)}>
+         <div className='image-container'>
            <img src={props.image} alt={props.altText}/>
          </div>
          <div className='favorite-info-wrapper'>
-           <div className='favorite-park-info-container'>
-             <h2>{props.name}</h2>
-             <h3>{props.state}</h3>
-           </div>
+            <h2>{props.name}</h2>
+            <h3>{props.state}</h3>
          </div>
        </div>
     </Link>

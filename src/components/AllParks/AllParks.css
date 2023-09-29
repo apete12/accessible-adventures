@@ -1,9 +1,43 @@
+.all-parks-header-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 33, 0);
+  color: white;
+  padding-top: .5em;
+}
+
+.all-parks-header-container h2{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Abel', sans-serif;
+}
+
+.all-parks-header-container p{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-family: 'Abel', sans-serif;
+}
+
 .all-parks-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     place-items: center;
     gap: 6rem;
-    margin-top:4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
   }
 
   @media only screen and (max-width: 1130px) {
