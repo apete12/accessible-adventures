@@ -7,9 +7,9 @@
 .favorite-park-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 15rem;
-    height: 20rem;
+    height: 25rem;
     cursor: pointer;
   }
   
@@ -59,6 +59,7 @@
     color: rgb(245, 239, 239);
     background: black;
     cursor: pointer;
+    margin-top: -2em;
   }
 
   #delete-text{

@@ -84,6 +84,10 @@ function App() {
             path="/saved-parks/details/:name" 
             element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
          />
+          <Route 
+            path="/national-parks/details/:name" 
+            element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
+         />
           <Route path='*' element={<UrlError/>}/>
       </Routes>
       {error && <Error error={error} />}
