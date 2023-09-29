@@ -11,6 +11,18 @@ describe('Test Home Page with All Parks', () => {
     .visit('http://localhost:3000/')
   });
 
+  it('should display header', () => {
+    cy.get('.title-wrapper')
+    cy.get('h1')
+      .should('contain', 'a11y adventures')
+  });
+
+  it('should display nav bar', () => {
+    cy.get('.nav-wrapper')
+    cy.get('[href="/saved-parks"]')
+    cy.get('[href="/"]')
+  });
+
   it('should display single park details upon click of national park card', () => {
     cy.wait('@loadParks');
     cy.wait('@loadAmenities');
@@ -20,8 +32,8 @@ describe('Test Home Page with All Parks', () => {
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+      cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
     
   });
 
@@ -34,14 +46,14 @@ describe('Test Home Page with All Parks', () => {
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img')
+    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img')
     cy.get(':nth-child(1) > .info-container > h3')
       .should('contain', 'ME')
 
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Badlands National Park')
-      cy.get('[href="/Badlands National Park"] > .park-card > .image-container > img')
+      cy.get('[href="/details/Badlands National Park"] > .park-card > .image-container > img')
     cy.get(':nth-child(1) > .info-container > h3')
       .should('contain', 'SD')
   });
@@ -53,7 +65,6 @@ describe('Test Home Page with All Parks', () => {
       statusCode: 500})
       cy.get('.error-container')
       cy.get('.error')
-      // .contains('Unable to retrieve contacts from server.')
   })
   
 

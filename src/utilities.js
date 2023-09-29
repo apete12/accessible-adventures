@@ -59,10 +59,15 @@ const filterAllParks = (accessibleParks, allParks) => {
 const trimParkData = (allParks) => {
   const reducedData = allParks.map(park => {
       const { id, fullName, url, states, description, images, designation} = park;
-      return { id, fullName, url, states, description, images: images[0], designation};
+      const firstImage = images[0];
+      const imageUrl = firstImage?.url || '';
+      const altText = firstImage?.altText || '';
+      
+      return { id, fullName, url, states, description, images: { url: imageUrl, altText }, designation};
   });
   return reducedData;
 }
+
 
 
 export { filterAccessibleAmenities, filterAllParks, trimParkData }

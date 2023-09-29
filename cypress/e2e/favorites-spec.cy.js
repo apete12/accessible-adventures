@@ -23,15 +23,15 @@ describe('Test Single Park Details', () => {
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
     cy.get('.favorite-park-btn').click()
 
     cy.get('.nav-wrapper')
-    cy.get('[href="/national-parks/saved-parks"]').click()
+    cy.get('[href="/saved-parks"]').click()
   
     cy.wait('@loadParks')
     cy.wait('@loadAmenities')
@@ -59,8 +59,23 @@ describe('Test Single Park Details', () => {
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/Acadia%20National%20Park')
+    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
+
+    cy.get('.accessibility-container')
+    cy.get('.features-buttons-styling-container')
+    cy.get('.favorite-park-btn').click()
+
+    cy.get('.nav-wrapper')
+    cy.get('[href="/saved-parks"]').click()
+    cy.url().should('eq', 'http://localhost:3000/saved-parks')
+    cy.get('.all-favorite-parks-container').children().should('have.length', 1)
+
+    cy.get('.all-favorite-parks-container')
+
+    cy.get('.favorite-park-card')
+    cy.get('.image-container').click()
+    cy.url().should('eq', 'http://localhost:3000/saved-parks/details/Acadia%20National%20Park')
   });
 
   it('Should display error message with a 500 level error', () => {
@@ -71,10 +86,6 @@ describe('Test Single Park Details', () => {
       cy.get('.error-container')
       cy.get('.error')
 
-      // .contains('Unable to retrieve contacts from server.')    
-
-
   })
 
- 
 })

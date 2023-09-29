@@ -73,18 +73,18 @@ function App() {
         <Route path="/" element={!isLoading && <Home/>}/>
         <Route path="/national-parks" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
         <Route 
-          path="/national-parks/details/:name" 
+          path="details/:name" 
           element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
         />
-        <Route 
+         <Route 
             path="/saved-parks" 
             element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
          />
          <Route 
             path="/saved-parks/details/:name" 
-            element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
+            element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
          />
-          <Route path="*" element={<UrlError/>}/>
+          <Route path='*' element={<UrlError/>}/>
       </Routes>
       {error && <Error error={error} />}
   </>

@@ -16,7 +16,7 @@ import site from '../../images/site.png'
 import seating from '../../images/seating.png'
 
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 const SinglePark = ({
   selectedSinglePark,
@@ -24,7 +24,6 @@ const SinglePark = ({
   setSavedParks,
   savedParks
 }) => {
-
   const getAccessibilityIcon = name => {
     switch (name) {
       case 'Assistive Listening Systems':
@@ -66,87 +65,95 @@ const SinglePark = ({
     }
   }
 
+  const isParkFavorited = savedParks.some(
+    savedPark => savedPark.fullName === selectedSinglePark.fullName
+  )
+
   const helperSavePark = park => {
-    console.log(park)
-    const parkExists = savedParks.find(savedPark => savedPark.fullName === park.fullName);
-
-    if (!parkExists) {
-        setSavedParks([...savedParks, park]);
-
-      } else {
-        console.log(`Park ${park.name} already exists in savedParks`);
-        return
+    if (!isParkFavorited) {
+      setSavedParks([...savedParks, park])
+    } else {
+      setSavedParks(
+        savedParks.filter(savedPark => savedPark.fullName !== park.fullName)
+      )
     }
-}
+  }
 
-  return selectedSinglePark && (
-    <div className='single-park-container'id='single-park-container'>
-      <div className='single-park-info-container'>
-        <div className='styling-container'>
-          <h2>{selectedSinglePark.fullName}</h2>
-          <img
-            src={selectedSinglePark.images.url}
-            alt={selectedSinglePark.images.altText}
-            id='park-image'
-          />
-          <div className='styling-container-two'>
-            <h3>{selectedSinglePark.states}</h3>
-            <h3>{selectedSinglePark.designation}</h3>
+  return (
+    selectedSinglePark && (
+      <div className='single-park-container' id='single-park-container'>
+        <div className='single-park-info-container'>
+          <div className='styling-container'>
+            <h2>{selectedSinglePark.fullName}</h2>
+            <img
+              src={selectedSinglePark.images.url}
+              alt={selectedSinglePark.images.altText}
+              id='park-image'
+            />
+            <div className='styling-container-two'>
+              <h3>{selectedSinglePark.states}</h3>
+              <h3>{selectedSinglePark.designation}</h3>
+            </div>
+            <p>{selectedSinglePark.description}</p>
           </div>
-          <p>{selectedSinglePark.description}</p>
-        </div>
-        <div className='accessibility-container'>
-          <h2>Park's Accessible Features</h2>
-          <div className='features-styling-container'>
-            {singleParkAccessibility.map((accessibility, index) => (
-              <div className='feature-wrapper' key={index}>
-                <div>
-                  <img
-                    src={getAccessibilityIcon(accessibility.name)}
-                    alt={accessibility.name}
-                  />
-                  <p>{accessibility.name}</p>
+          <div className='accessibility-container'>
+            <h2>Park's Accessible Features</h2>
+            <div className='features-styling-container'>
+              {singleParkAccessibility.map((accessibility, index) => (
+                <div className='feature-wrapper' key={index}>
+                  <div>
+                    <img
+                      src={getAccessibilityIcon(accessibility.name)}
+                      alt={accessibility.name}
+                    />
+                    <p>{accessibility.name}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className='features-buttons-styling-container'>
-            <button className='favorite-park-btn'onClick={event => helperSavePark(selectedSinglePark)}>
-            ⭐️ Add Park to Favorites!
-            </button>
-            <Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support'>
-            National Park Service Accessibility Support
-            </Link>
+              ))}
+            </div>
+            <div className='features-buttons-styling-container'>
+              <button
+                className='favorite-park-btn'
+                onClick={event => helperSavePark(selectedSinglePark)}
+              >
+                {isParkFavorited
+                  ? 'Remove from Favorites'
+                  : '⭐️ Add Park to Favorites!'}
+              </button>
+              <Link
+                to={`https://www.nps.gov/aboutus/accessibility.htm`}
+                className='accessibility-support'
+              >
+                National Park Service Accessibility Support
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    )
   )
 }
 
 export default SinglePark
 
 SinglePark.propTypes = {
-  // selectedSinglePark: PropTypes.shape({
-      // id: PropTypes.string.isRequired,
-      // fullName: PropTypes.string.isRequired,
-      // states: PropTypes.string.isRequired,
-      // description: PropTypes.string,
-      // designation: PropTypes.string,
-      // url: PropTypes.string,
-      // images: PropTypes.shape({
-        // altText: PropTypes.string.isRequired,
-        // caption: PropTypes.string,
-      //   credit: PropTypes.string,
-      //   title: PropTypes.string,
-      //   url: PropTypes.string.isRequired,
-      // }),
-    // }),
-    singleParkAccessibility: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        parks: PropTypes.arrayOf( 
+  selectedSinglePark: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      fullName: PropTypes.string.isRequired,
+      states: PropTypes.string.isRequired,
+      designation: PropTypes.string,
+      images: PropTypes.shape({
+        altText: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired
+      })
+    })
+  ),
+  singleParkAccessibility: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      parks: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
           name: PropTypes.string,
@@ -154,35 +161,23 @@ SinglePark.propTypes = {
           designation: PropTypes.string,
           parkCode: PropTypes.string,
           states: PropTypes.string,
-          url: PropTypes.string,
+          url: PropTypes.string
         })
-        )
-      })
-    ),
-    savedParks: PropTypes.arrayOf(
-      PropTypes.shape({
+      )
+    })
+  ),
+  savedParks: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
       fullName: PropTypes.string.isRequired,
       states: PropTypes.string.isRequired,
       images: PropTypes.objectOf(
-      PropTypes.shape({
-        altText: PropTypes.string.isRequired,
-        caption: PropTypes.string,
-        credit: PropTypes.string,
-        title: PropTypes.string,
-        url: PropTypes.string.isRequired,
-      })),
-      description: PropTypes.string.isRequired,
-      designation: PropTypes.string.isRequired,
-      url: PropTypes.string,
-    }))
+        PropTypes.shape({
+          altText: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired
+        })
+      ),
+      description: PropTypes.string.isRequired
+    })
+  )
 }
-
-
-
-
-
-
-
-
-
