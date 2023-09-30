@@ -7,16 +7,16 @@
 .favorite-park-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 15rem;
-    height: 20rem;
+    height: 25rem;
     cursor: pointer;
   }
   
   .favorite-park-card h2 {
     display: flex;
-    font-size: 1em;
-    font-family: 'Aleo', sans-serif;
+    font-size: 1.3em;
+    font-family: 'Abel', sans-serif;
     color: rgb(245, 239, 239);
     margin: 0px;
     padding: .4em;
@@ -24,8 +24,8 @@
   
   .favorite-park-card h3 {
     display: flex;
-    font-size: .80em;
-    font-family: 'Aleo', sans-serif;
+    font-size: .9em;
+    font-family: 'Abel', sans-serif;
     color: rgb(245, 239, 239);
     margin: 0px;
     padding: .4em;
@@ -40,6 +40,8 @@
   
   .favorite-info-wrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 25%;
     background-color: rgb(0, 33, 0);
@@ -59,6 +61,7 @@
     color: rgb(245, 239, 239);
     background: black;
     cursor: pointer;
+    margin-top: -2em;
   }
 
   #delete-text{
@@ -66,13 +69,6 @@
     margin-left: .3em;
   }
 
-  .favorite-park-info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 75%;
-  }
-  
   .favorite-park-card img {
     display: flex;
     object-fit: cover;
@@ -80,3 +76,145 @@
     height: 14em;
   }
   
+
+  @media only screen and (max-width: 1300px) {
+    .single-park-info-container {
+      display: flex;
+      width: 100vw;
+      margin-top: 0;
+    }
+  
+    .single-park-container {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      margin-top: 1em;
+    }
+  
+    #park-image {
+      display: flex;
+      width: 15em;
+    }
+  
+    .single-park-info-container h2 {
+      font-size: 1.5em;
+      font-family: 'Aleo', sans-serif;
+      margin-bottom: 0.5em;
+      margin-top: 0em;
+    }
+  
+    .single-park-info-container h3 {
+      font-size: 0.75em;
+      font-family: 'Aleo', sans-serif;
+      margin-bottom: 0.2em;
+    }
+  
+    .single-park-info-container p {
+      font-size: 0.8em;
+      margin-bottom: 0.2em;
+    }
+  
+    .styling-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30em;
+      height: 20em;
+      border: solid 0.1em black;
+      background: rgb(0, 33, 0);
+      color: white;
+      padding: 1em;
+    }
+  
+    .accessibility-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 30em;
+      height: 20em;
+      border: solid 0.1em black;
+      background: rgb(0, 33, 0);
+      color: white;
+      padding: 1em;
+    }
+  
+    .accessibility-container h2 {
+      margin-bottom: 15px;
+    }
+  
+    .features-styling-container {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 15px;
+      row-gap: 40px;
+      font-size: 0.9rem;
+    }
+  
+    .feature-wrapper div {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+      margin: 0px;
+    }
+    .feature-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+      margin: 0px;
+    }
+  
+    .feature-wrapper p {
+      margin: 0px;
+    }
+  
+    .features-styling-container img {
+      display: flex;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5em;
+    }
+  
+    .features-buttons-styling-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 50%;
+      width: 100%;
+    }
+  
+    .styling-container-two {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+    }
+  
+    .accessibility-support {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2em;
+      font-family: 'Aleo', sans-serif;
+      font-size: 1.1em;
+      cursor: pointer;
+      color: white;
+    }
+  
+    .favorite-park-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Aleo', sans-serif;
+      font-size: 0.8em;
+      cursor: pointer;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      width: 50%;
+    }
+  }
+  
+ 

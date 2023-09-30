@@ -1,9 +1,25 @@
+.favorites-heading-container,
+.no-favorites-message {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 33, 0);
+  color: white;
+  padding-top: .5em;
+  font-family: 'Abel', sans-serif;
+
+}
+
 .favorite-parks-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: .5em;
 }
 
 .all-favorite-parks-container {
@@ -24,6 +40,17 @@
     font-size: 1.5em;
     font-family: 'Aleo', sans-serif;
   }
+
+.no-favorites-message {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 33, 0);
+  color: white;
+  padding-top: .5em;
+}
   
   @media only screen and (max-width: 1370px) {
     .favorite-parks-container {

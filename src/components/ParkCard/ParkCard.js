@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const ParkCard = (props) => {
 
 return (
- <Link to={`details/${props.name}`}>
-    <div className='park-card' key={props.id} onClick={() => props.selectSinglePark(props.name)}>
+ <Link to={`/national-parks/${props.name}`} onClick={() => props.selectSinglePark(props.name)}>
+    <div className='park-card' key={props.id} >
       <div className='image-container'>
         <img src={props.image} alt={props.altText}/>
       </div>

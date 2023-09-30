@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation,  } from 'react-router-dom';
 import { filterAccessibleAmenities, filterAllParks, trimParkData } from './utilities'
 import { fetchAmenities, fetchParks } from './api-calls'
 import Header from './components/Header/Header'
@@ -9,7 +9,9 @@ import Loading from './components/Loading/Loading'
 import AllParks from './components/AllParks/AllParks'
 import AllFavorites from './components/AllFavorites/AllFavorites'
 import Error from './components/Error/Error';
-import UrlError from './components/URL/UrlError';
+import UrlError from './components/UrlError/UrlError';
+import Home from './components/Home/Home';
+
 
 function App() {
   const [allParks, setAllParks] = useState([])
@@ -21,9 +23,10 @@ function App() {
   const [error, setError] = useState('')
 
   const location = useLocation().pathname
-  
+
   useEffect(() => {
     setError('')
+    console.log(location)
   }, [location])
   
   useEffect(() => {
@@ -52,9 +55,11 @@ function App() {
   const selectSinglePark = (parkFullName) => {
     let singlePark = allParks.find(park => park.fullName == parkFullName)
     setSelectedSinglePark(singlePark)
+    console.log(singlePark)
 
     let singleParkAmenities = accessibleFeatures[parkFullName]
     setSingleParkAccessibility(singleParkAmenities)
+    console.log(singleParkAmenities)
     setIsLoading(false)
   }
   
@@ -67,19 +72,11 @@ function App() {
        <Header returnAllParks={returnAllParks}/> 
        {isLoading && <Loading />}
        <Routes>
-        <Route path="/" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
-        <Route 
-          path="details/:name" 
-          element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
-        />
-         <Route 
-            path="/saved-parks" 
-            element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}
-         />
-         <Route 
-            path="/saved-parks/details/:name" 
-            element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}
-         />
+          <Route path="/" element={!isLoading && <Home/>}/>
+          <Route path="national-parks" element={!isLoading && <AllParks allParks={allParks} selectSinglePark={selectSinglePark}/>}/>
+          <Route path="national-parks/:name" element={!isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}/>
+          <Route path="saved-parks" element={!error && !isLoading && <AllFavorites savedParks={savedParks} setSavedParks={setSavedParks} returnAllParks={returnAllParks} selectSinglePark={selectSinglePark}/>}/>
+          <Route path="saved-parks/:name" element={!error && !isLoading && <SinglePark singleParkAccessibility={singleParkAccessibility} selectedSinglePark={selectedSinglePark} returnAllParks={returnAllParks} setSavedParks={setSavedParks} savedParks={savedParks}/>}/>         
           <Route path='*' element={<UrlError/>}/>
       </Routes>
       {error && <Error error={error} />}

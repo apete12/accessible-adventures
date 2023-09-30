@@ -13,15 +13,41 @@ describe('Test nav links', () => {
     .visit('http://localhost:3000/')
   });
 
-  it('Visit favorites from home page and back to home', () => {
-
+  it('Visit favorites from home page', () => {
     cy.visit('http://localhost:3000/')
     cy.get('.nav-wrapper')
     cy.get('[href="/saved-parks"]').click()
     cy.visit('http://localhost:3000/saved-parks')
-    cy.get('.nav-wrapper')
-    cy.get('[href="/"]').click()
+  });
+
+  it('Visit home page from favorites page', () => {
+    cy.visit('http://localhost:3000/saved-parks')
+    cy.get('#return-btn-container > [href="/"]').click()
     cy.visit('http://localhost:3000/')
+  });
+
+  it('Visit all parks page from home page', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('#return-btn-container > [href="/national-parks"]').click()
+    cy.visit('http://localhost:3000/national-parks')
+  });
+
+  it('Visit home page from all parks page', () => {
+    cy.visit('http://localhost:3000/national-parks')
+    cy.get('#return-btn-container > [href="/"]').click()
+    cy.visit('http://localhost:3000/')
+  });
+
+  it('Visit all parks page from favorites page', () => {
+    cy.visit('http://localhost:3000/saved-parks')
+    cy.get('#return-btn-container > [href="/national-parks"]').click()
+    cy.visit('http://localhost:3000/national-parks')
+  });
+
+  it('Visit favorites page from all parks page', () => {
+    cy.visit('http://localhost:3000/national-parks')
+    cy.get('[href="/saved-parks"]').click()
+    cy.visit('http://localhost:3000/saved-parks')
   });
 
 })

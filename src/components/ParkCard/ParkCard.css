@@ -9,8 +9,8 @@
 
 .park-card h2 {
   display: flex;
-  font-size: 1em;
-  font-family: 'Aleo', sans-serif;
+  font-size: 1.1em;
+  font-family: 'Abel', sans-serif;
   color: rgb(245, 239, 239);
   margin: 0px;
   padding: .4em;
@@ -18,8 +18,8 @@
 
 .park-card h3 {
   display: flex;
-  font-size: .80em;
-  font-family: 'Aleo', sans-serif;
+  font-size: .87em;
+  font-family: 'Abel', sans-serif;
   color: rgb(245, 239, 239);
   margin: 0px;
   padding: .4em;

@@ -17,12 +17,14 @@ describe('Test Single Park Details', () => {
     cy.wait('@loadParks');
     cy.wait('@loadAmenities');
 
+    cy.visit('http://localhost:3000/national-parks')
+
     cy.get('.all-parks-container')
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
     cy.get('.single-park-container')
     cy.get('.styling-container > h2')
     .should('contain', 'Acadia National Park')
@@ -52,12 +54,14 @@ describe('Test Single Park Details', () => {
     cy.wait('@loadParks');
     cy.wait('@loadAmenities');
 
+    cy.visit('http://localhost:3000/national-parks')
+
     cy.get('.all-parks-container')
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
@@ -66,15 +70,17 @@ describe('Test Single Park Details', () => {
   });
 
   it('Should add park to favorite parks on button click and display park on favorites page', () => {
-    cy.wait('@loadParks');
-    cy.wait('@loadAmenities');
+    cy.wait('@loadParks')
+    cy.wait('@loadAmenities')
+
+    cy.visit('http://localhost:3000/national-parks')
 
     cy.get('.all-parks-container')
 
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
@@ -92,6 +98,26 @@ describe('Test Single Park Details', () => {
       .should('contain', 'ME')
     cy.get('.delete-icon-wrapper')
     .should('contain', 'Remove from Favorites')
+
+  });
+
+  it('Should take user to National Park Service Accessibility Support site', () => {
+    cy.wait('@loadParks');
+    cy.wait('@loadAmenities');
+
+    cy.visit('http://localhost:3000/national-parks')
+
+    cy.get('.all-parks-container')
+
+    cy.get(':nth-child(1) > .info-container > h2')
+      .should('contain', 'Acadia National Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
+
+    cy.get('.accessibility-container')
+    cy.get('.features-buttons-styling-container')
+    cy.get('.accessibility-support')
+    
   });
 
   it('Should display error message with a 500 level error', () => {
@@ -101,6 +127,7 @@ describe('Test Single Park Details', () => {
       statusCode: 500})
       cy.get('.error-container')
       cy.get('.error')
+
   })
   it('Should display URL error page with a 404 level error', () => {
     cy.visit('http://localhost:3000/nonsense')
