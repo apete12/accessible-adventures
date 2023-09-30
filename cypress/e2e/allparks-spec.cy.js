@@ -32,8 +32,8 @@ describe('Test Home Page with All Parks', () => {
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-      cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img').click()
-    cy.url().should('eq', 'http://localhost:3000/details/Acadia%20National%20Park')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
+    cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
     
   });
 
@@ -46,14 +46,14 @@ describe('Test Home Page with All Parks', () => {
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Acadia National Park')
-    cy.get('[href="/details/Acadia National Park"] > .park-card > .image-container > img')
+    cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img')
     cy.get(':nth-child(1) > .info-container > h3')
       .should('contain', 'ME')
 
     cy.get('.all-parks-container')
     cy.get(':nth-child(1) > .info-container > h2')
       .should('contain', 'Badlands National Park')
-      cy.get('[href="/details/Badlands National Park"] > .park-card > .image-container > img')
+    cy.get('[href="/national-parks/Badlands National Park"] > .park-card > .image-container > img')
     cy.get(':nth-child(1) > .info-container > h3')
       .should('contain', 'SD')
   });
