@@ -46,21 +46,104 @@
     }
   } 
 
-  @media only screen and (max-width: 570px) {
+  @media only screen and (max-width: 610px) {
+    .all-parks-header-container h2{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-family: 'Abel', sans-serif;
+    }
+    
+    .all-parks-header-container p{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      font-size: 1em;
+      font-family: 'Abel', sans-serif;
+      overflow-wrap: break-word;
+
+    }
+  
+  }
+
+  @media only screen and (max-width: 515px) {
     .all-parks-container {
       margin-top: 2em;
     }
+
+    .all-parks-header-container h2{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-family: 'Abel', sans-serif;
+    }
+    
+    .all-parks-header-container p{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      font-size: .9em;
+      font-family: 'Abel', sans-serif;
+      overflow-wrap: break-word;
+    }
   }
 
-  @media only screen and (max-width: 440px) {
+  @media only screen and (max-width: 450px) {
     .all-parks-container {
       margin-top: 2em;
+    }
+
+    .all-parks-header-container h2{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-size: 1em;
+      font-family: 'Abel', sans-serif;
+    }
+
+    .all-parks-header-container p{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      font-size: .75em;
+      font-family: 'Abel', sans-serif;
+      overflow-wrap: break-word;
     }
   }
 
   @media only screen and (max-width: 370px) {
     .all-parks-container {
       margin-top: 2em;
+    }
+
+    .all-parks-header-container p{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      font-size: .6em;
+      font-family: 'Abel', sans-serif;
+      overflow-wrap: break-word;
     }
   
   }
