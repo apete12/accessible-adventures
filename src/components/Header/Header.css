@@ -641,7 +641,7 @@
       align-items: center;
       font-size: .04em;
       padding-left: .8em;
-      margin-top: 9em;
+      margin-top: 3em;
     }
 
     .nav-wrapper {
@@ -656,7 +656,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 6em;
+      height: 5em;
       width: 18em;
       font-family: 'Aleo', sans-serif;
       font-size: .2em;
@@ -671,7 +671,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 6em;
+      height: 5em;
       width: 28em;
       font-family: 'Aleo', sans-serif;
       font-size: .2em;
