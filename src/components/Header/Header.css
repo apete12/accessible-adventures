@@ -605,7 +605,6 @@
     .ally-logo{
       display: flex;
       height: 2rem;
-      margin: 0px;
       padding: 0px;
     }
 
@@ -631,6 +630,7 @@
     .title-wrapper{
       display: flex;
       align-items: center;
+      justify-content: space-evenly;
       flex-direction: column;
       padding-left: 0em;
       width: 25%;
