@@ -32,6 +32,8 @@ const SinglePark = ({
         return assistiveListening
       case 'Audio Description':
         return ad
+      case 'Audio Description - Live':
+        return ad
       case 'Automated Entrance':
         return entrance
       case 'Elevator':
@@ -64,7 +66,7 @@ const SinglePark = ({
         return null
     }
   }
-  console.log('hi')
+  console.log('hi', selectedSinglePark)
 
   const isParkFavorited = savedParks.some(
     savedPark => savedPark.fullName === selectedSinglePark.fullName
@@ -96,6 +98,7 @@ const SinglePark = ({
               <h3>{selectedSinglePark.designation}</h3>
             </div>
             <p>{selectedSinglePark.description}</p>
+            <Link to={selectedSinglePark.url} className='park-website'>Check out the {selectedSinglePark.fullName} website.</Link>
           </div>
           <div className='accessibility-container'>
             <h2>Park's Accessible Features</h2>

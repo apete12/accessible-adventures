@@ -16,7 +16,7 @@
 
 #park-image {
   display: flex;
-  width: 20em;
+  width: 30em;
 }
 
 .single-park-info-container h2 {
@@ -27,7 +27,7 @@
 }
 
 .single-park-info-container h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: 'Abel', sans-serif;
   margin-bottom: 0.2em;
 }
@@ -38,12 +38,19 @@
   margin-bottom: 0.2em;
 }
 
+.park-website {
+  font-size: 1.2em;
+  font-family: 'Abel', sans-serif;
+  margin-top: 2em;
+  color: white;
+}
+
 .styling-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 600px;
-  height: 500px;
+  width: 40em;
+  height: 45em;
   border: solid 0.1em black;
   background: rgb(0, 33, 0);
   color: white;
@@ -55,12 +62,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 600px;
-  height: 500px;
+  width: 40em;
+  height: 45em;
   border: solid 0.1em black;
   background: rgb(0, 33, 0);
   color: white;
-  padding: .75em;
+  padding: 1em;
 }
 
 .accessibility-container h2 {
@@ -141,7 +148,7 @@
   width: 40%;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1370px) {
   .single-park-info-container {
     display: flex;
     width: 100vw;
@@ -183,7 +190,7 @@
     flex-direction: column;
     align-items: center;
     width: 30em;
-    height: 20em;
+    height: 30em;
     border: solid 0.1em black;
     background: rgb(0, 33, 0);
     color: white;
@@ -196,7 +203,7 @@
     align-items: center;
     justify-content: space-around;
     width: 30em;
-    height: 20em;
+    height: 30em;
     border: solid 0.1em black;
     background: rgb(0, 33, 0);
     color: white;
@@ -212,7 +219,7 @@
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
-    row-gap: 40px;
+    row-gap: 1.8em;
     font-size: 0.9rem;
   }
 
@@ -296,7 +303,7 @@
     flex-direction: column;
     align-items: center;
     width: 50em;
-    height: 30em;
+    height: 40em;
     border: solid 0.1em black;
     background: rgb(0, 33, 0);
     color: white;
@@ -306,7 +313,7 @@
 
   #park-image {
     display: flex;
-    width: 20em;
+    width: 26em;
   }
 
   .single-park-info-container h2 {
@@ -323,8 +330,16 @@
   }
 
   .single-park-info-container p {
-    font-size: 1em;
+    font-size: 1.3em;
     margin-bottom: 0.2em;
+    overflow-wrap: break-word;
+  }
+
+  .park-website {
+    font-size: 1.5em;
+    font-family: 'Abel', sans-serif;
+    margin-top: 2em;
+    color: white;
   }
 
   .accessibility-container {
@@ -350,7 +365,7 @@
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
-    row-gap: 40px;
+    row-gap: 1.5em;
     font-size: 0.9rem;
   }
 
@@ -369,8 +384,8 @@
 
   .features-styling-container img {
     display: flex;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     margin-right: 0.5em;
   }
 
@@ -426,8 +441,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35em;
-    height: 30em;
+    width: 40em;
+    height: 40em;
     border: solid 0.1em black;
     background: rgb(0, 33, 0);
     color: white;
@@ -437,7 +452,7 @@
 
   #park-image {
     display: flex;
-    width: 17em;
+    width: 25em;
   }
 
   .single-park-info-container h2 {
@@ -454,8 +469,9 @@
   }
 
   .single-park-info-container p {
-    font-size: .9em;
+    font-size: 1.2em;
     margin-bottom: 0.2em;
+    overflow-wrap: break-word;
   }
 
   .accessibility-container {
@@ -463,8 +479,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 35em;
-    height: 35em;
+    width: 40em;
+    height: 40em;
     border: solid 0.1em black;
     background: rgb(0, 33, 0);
     color: white;
@@ -497,221 +513,433 @@
   }
 }
 
-@media only screen and (max-width: 620px) {
-    .single-park-info-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100vw;
-      margin-top: 2em;
-    }
-  
-    .styling-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 20em;
-      height: 35em;
-      border: solid 0.1em black;
-      background: rgb(0, 33, 0);
-      color: white;
-      padding: 1em;
-      margin-bottom: 2em;
-    }
-  
-    #park-image {
-      display: flex;
-      width: 17em;
-    }
-  
-    .single-park-info-container h2 {
-      font-size: 1.75em;
-      font-family: 'Aleo', sans-serif;
-      margin-bottom: 0.5em;
-      margin-top: 0em;
-    }
-  
-    .single-park-info-container h3 {
-      font-size: 1em;
-      font-family: 'Aleo', sans-serif;
-      margin-bottom: 0.2em;
-    }
-  
-    .single-park-info-container p {
-      font-size: .9em;
-      margin-bottom: 0.2em;
-    }
-  
-    .accessibility-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      width: 20em;
-      height: 45em;
-      border: solid 0.1em black;
-      background: rgb(0, 33, 0);
-      color: white;
-      padding: 1em;
-      margin-bottom: 1em;
-    }
-  
-    .feature-wrapper p {
-      font-size: 1em;
-      margin: 0px;
-    }
-  
-    .features-styling-container img {
-      display: flex;
-      width: 3rem;
-      height: 3rem;
-      margin-right: 0.5em;
-    }
-  
-    .favorite-park-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Aleo', sans-serif;
-      font-size: .75em;
-      cursor: pointer;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      width: 50%;
-    }
-
-    .features-styling-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        row-gap: 5px;
-        font-size: 0.9rem;
-      }
-
-      .accessibility-support {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 2em;
-        font-family: 'Aleo', sans-serif;
-        font-size: 1em;
-        cursor: pointer;
-        color: white;
-      }
+@media only screen and (max-width: 700px) {
+  .single-park-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2em;
   }
 
-@media only screen and (max-width: 570px) {
-.single-park-info-container {
+  .styling-container {
     display: flex;
-    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+    height: 35em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+  #park-image {
+    display: flex;
+    width: 20em;
+  }
+
+  .single-park-info-container h2 {
+    font-size: 1.75em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.5em;
     margin-top: 0em;
+    overflow-wrap: break-word;
+  }
+
+  .single-park-info-container h3 {
+    font-size: 1em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.2em;
+  }
+
+  .single-park-info-container p {
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+  }
+
+  .park-website {
+    font-size: 1.2em;
+  }
+
+  .accessibility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30em;
+    height: 35em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .feature-wrapper p {
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .features-styling-container img {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5em;
+  }
+
+  .favorite-park-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.75em;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 50%;
+  }
+
+  .features-styling-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2r));
+    row-gap: 2em;
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+
+  .accessibility-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
   }
 }
 
-@media only screen and (max-width: 370px) {
-    .single-park-info-container {
-        display: flex;
-        width: 100vw;
-        margin-top: -2em;
-      }
-      .single-park-info-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-        margin-top: 2em;
-      }
-    
-      .styling-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 16em;
-        height: 35em;
-        border: solid 0.1em black;
-        background: rgb(0, 33, 0);
-        color: white;
-        padding: 1em;
-        margin-bottom: 2em;
-      }
-    
-      #park-image {
-        display: flex;
-        width: 17em;
-      }
-    
-      .single-park-info-container h2 {
-        font-size: 1.75em;
-        font-family: 'Aleo', sans-serif;
-        margin-bottom: 0.5em;
-        margin-top: 0em;
-      }
-    
-      .single-park-info-container h3 {
-        font-size: .8em;
-        font-family: 'Aleo', sans-serif;
-        margin-bottom: 0.2em;
-      }
-    
-      .single-park-info-container p {
-        font-size: .9em;
-        margin-bottom: 0.2em;
-      }
-    
-      .accessibility-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        width: 16em;
-        height: 50em;
-        border: solid 0.1em black;
-        background: rgb(0, 33, 0);
-        color: white;
-        padding: 1em;
-        margin-bottom: 1em;
-      }
-    
-      .feature-wrapper p {
-        font-size: 1em;
-        margin: 0px;
-      }
-    
-      .features-styling-container img {
-        display: flex;
-        width: 3rem;
-        height: 3rem;
-        margin-right: 0.5em;
-      }
-    
-      .favorite-park-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Aleo', sans-serif;
-        font-size: .75em;
-        cursor: pointer;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        width: 50%;
-      }
-  
-      .features-styling-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-          row-gap: 5px;
-          font-size: 0.9rem;
-        }
-  
-        .accessibility-support {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 2em;
-          font-family: 'Aleo', sans-serif;
-          font-size: 1em;
-          cursor: pointer;
-          color: white;
-        }
+@media only screen and (max-width: 620px) {
+  .single-park-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2em;
+  }
 
+  .styling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28em;
+    height: 30em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
 
-    }
+  #park-image {
+    display: flex;
+    width: 17em;
+  }
+
+  .single-park-info-container h2 {
+    font-size: 1.75em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 1.2em;
+    margin-top: 0em;
+  }
+
+  .single-park-info-container h3 {
+    font-size: 1em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.2em;
+  }
+
+  .single-park-info-container p {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+
+  .accessibility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 28em;
+    height: 30em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .accessibility-container h2 {
+    margin: 0px;
+  }
+
+  .feature-wrapper p {
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .features-styling-container img {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5em;
+  }
+
+  .favorite-park-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.75em;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 50%;
+  }
+
+  .features-styling-container {
+    display: grid;
+    row-gap: 1em;
+    font-size: 0.9rem;
+  }
+
+  .accessibility-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .single-park-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2em;
+  }
+
+  .styling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21em;
+    height: 29em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+  #park-image {
+    display: flex;
+    width: 14em;
+  }
+
+  .single-park-info-container h3 {
+    font-size: 1em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.2em;
+  }
+
+  .park-website {
+    font-size: 1em;
+  }
+
+  .styling-container-two {
+    display: flex;
+    width: 75%;
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+
+  .accessibility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 21em;
+    height: 29em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .accessibility-container h2 {
+    margin: 0px;
+  }
+
+  .feature-wrapper p {
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .features-styling-container img {
+    display: none;
+  }
+
+  .favorite-park-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.75em;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 50%;
+  }
+
+  .features-styling-container {
+    display: grid;
+  }
+
+  .feature-wrapper p {
+    font-size: .9rem;
+
+  }
+
+  .accessibility-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+  }
+
+  .features-styling-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    row-gap: 1em;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .single-park-info-container {
+    display: flex;
+    width: 100vw;
+  }
+
+  .single-park-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 2em;
+  }
+
+  .styling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16em;
+    height: 37em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+  #park-image {
+    display: flex;
+    width: 17em;
+  }
+
+  .single-park-info-container h2 {
+    font-size: 1.75em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+  }
+
+  .single-park-info-container h3 {
+    font-size: 0.8em;
+    font-family: 'Aleo', sans-serif;
+    margin-bottom: 0.2em;
+  }
+
+  .single-park-info-container p {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+
+  .accessibility-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 16em;
+    height: 50em;
+    border: solid 0.1em black;
+    background: rgb(0, 33, 0);
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .feature-wrapper p {
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .features-styling-container img {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5em;
+  }
+
+  .favorite-park-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.75em;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 60%;
+  }
+
+  .features-styling-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    row-gap: .5rem;
+    font-size: 0.9rem;
+  }
+
+  .accessibility-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+  }
+}
+
