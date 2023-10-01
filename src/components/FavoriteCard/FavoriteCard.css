@@ -48,8 +48,8 @@
   }
 
  #delete-favorite {
-    width: 2rem;
-    height: 2rem;
+    width: 1.7rem;
+    height:1.7rem;
     margin-left: .5em;
   }
 
@@ -57,6 +57,7 @@
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: center;
     font-family: 'Aleo', sans-serif;
     color: rgb(245, 239, 239);
     background: black;
@@ -65,7 +66,7 @@
   }
 
   #delete-text{
-    size: .01em;
+    font-size: 1em;
     margin-left: .3em;
   }
 

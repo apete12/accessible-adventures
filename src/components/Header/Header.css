@@ -1,12 +1,13 @@
 .header {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-bottom: black .1em solid;
     height: 6.5em;
     width: 100%;
     /* margin-bottom: 1em; */
     margin-top: 1em;
+    padding: .5em;
   }
 
   .title-wrapper{
@@ -42,7 +43,6 @@
     padding-left: .5em;
     width: 100%;
     height: 3em;
-    font-size: 1.2em;
   }
 
   .nav-link {
@@ -53,6 +53,7 @@
     width: 8em;
     font-family: 'Aleo', sans-serif;
     font-size: 1em;
+    font-weight: 600;
     cursor: pointer;
     color: black;
     margin-right: 1em;
@@ -61,7 +62,7 @@
 
   .active {
     background:black;
-    color: white;
+    color: rgb(255, 252, 252);
     height: 75%;
     display: flex;
     justify-content: center;
@@ -174,6 +175,7 @@
       height: 2em;
       width: 4em;
       font-family: 'Aleo', sans-serif;
+      font-weight: 400px;
       font-size: .9em;
       margin: 0em;
       cursor: pointer;
@@ -189,6 +191,7 @@
       height: 2em;
       width: 7em;
       font-family: 'Aleo', sans-serif;
+      font-weight: 400px;
       font-size: .9em;
       margin: 0em;
       cursor: pointer;
