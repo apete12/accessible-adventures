@@ -131,7 +131,7 @@
   justify-content: center;
   height: 2em;
   font-family: 'Abel', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.2em;
   cursor: pointer;
   color: white;
 }
@@ -831,7 +831,6 @@
 
   .features-styling-container {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     row-gap: 1em;
   }
 }

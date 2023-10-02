@@ -5,7 +5,6 @@
     border-bottom: black .1em solid;
     height: 6.5em;
     width: 100%;
-    /* margin-bottom: 1em; */
     margin-top: 1em;
     padding: .5em;
   }
@@ -27,12 +26,12 @@
 
   .ally-logo{
     display: flex;
-    height: 6rem;
+    height: 4rem;
   }
   
   .header h1 {
     display: flex;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Aleo', sans-serif;
   }
   
