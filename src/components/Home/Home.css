@@ -1,30 +1,29 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  background-image: url('../../images/yosemite.jpg');
-  background-position: bottom;
-  height: 85vh;
-  margin-top: -0;
+  background-image: url('../../images/tree-path.jpg');
+  background-position: center;
+  height: 100vh;
 }
 
 .ally {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 50em;
-  height: 26em;
-  background: rgba(255, 255, 255, 0.822);
+  justify-content: flex-start;
+  width: 45%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.855);
   padding: 1em;
-  margin-bottom: 3em;
 }
 
 .ally h2 {
-  font-size: 2.5em;
-  margin-top: 0.5em;
+  font-size: 2.5rem;
   margin: 0;
+  margin-top: .5em;
+  margin-bottom: .5em;
   font-family: 'Abel', sans-serif;
 }
 
@@ -32,6 +31,8 @@
   font-size: 1em;
   font-family: 'Aleo', sans-serif;
   font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .site {
@@ -51,7 +52,7 @@
 
 .lets-adventure {
   font-size: 1.5em;
-  margin-top: 0em;
+  margin-top: 1em;
   color: black;
   font-family: 'Abel', sans-serif;
 }
@@ -59,295 +60,92 @@
 .ally img {
   width: 8em;
   height: auto;
-  margin-top: 1em;
-  margin-bottom: 0em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1030px) {
+  .ally h2 {
+    font-size: 2rem;
+  }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 800px) {
+  .ally h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 701px) {
+  .ally h2 {
+    font-size: 1.5rem;
+  }
+
+  .ally p {
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 601px) {
   .home-container {
     display: flex;
-    background: white;
-    width: 100%;
-    height: 100%;
-    background-image: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('../../images/tree-path.jpg');
+    background-position: center;
+    height: 100vh;
   }
 
   .ally {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 50em;
-    height: 25em;
-    background-color: rgb(0, 33, 0);
-    color: white;
-    margin-top: 2em;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 60%;
+    margin-top: 1em;
   }
 
   .ally h2 {
-    font-size: 1.5em;
-    font-family: 'Abel', sans-serif;
-    margin-bottom: 0.1em;
+    font-size: 1.2rem;
   }
 
   .ally p {
-    font-size: 1.3em;
-    margin-top: 1em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
-
-  .site {
-    font-size: 0.85em;
-    color: white;
+    font-size: .8em;
   }
 
   .lets-adventure {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: white;
-    font-family: 'Abel', sans-serif;
-  }
-
-  .ally img {
-    display: none;
+    font-size: 1.2em;
   }
 }
 
-@media only screen and (max-width: 870px) {
-  .ally {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 75%;
-    height: 50%;
-    background-color: rgb(0, 33, 0);
-    color: white;
-  }
-
+@media only screen and (max-width: 481px) {
   .ally h2 {
-    font-size: 2em;
-    font-family: 'Abel', sans-serif;
+    font-size: 1rem;
   }
 
   .ally p {
+    font-size: .6em;
+  }
+
+  .lets-adventure {
     font-size: 1em;
-    margin-bottom: 1em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
-
-  .site {
-    font-size: 0.85em;
-    color: white;
-    margin: 1em;
-  }
-
-  .description {
-    font-size: 0.5em;
-    margin-top: 1em;
-    font-family: 'Aleo', sans-serif;
-    font-weight: 600;
-    line-height: 1.6em;
-  }
-
-  .lets-adventure {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: white;
-    font-family: 'Abel', sans-serif;
   }
 }
 
-@media only screen and (max-width: 620px) {
-  .ally {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 28em;
-    height: 25em;
-    background-color: rgb(0, 33, 0);
-    color: white;
-    margin-top: 2em;
-  }
-
+@media only screen and (max-width: 403px) {
   .ally h2 {
-    font-size: 1.75em;
-    font-family: 'Abel', sans-serif;
+    font-size: .8rem;
   }
 
   .ally p {
-    font-size: 0.85em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
+    font-size: .4em;
+    line-height: 2.5em;
 
-  .site {
-    font-size: 0.8em;
-    color: white;
   }
 
   .lets-adventure {
-    font-size: 1.5em;
-    color: white;
-    font-family: 'Abel', sans-serif;
-  }
-  .description {
-    font-size: 0.5em;
-    font-family: 'Aleo', sans-serif;
-    font-weight: 600;
-    line-height: 1.6em;
-  }
-}
-
-@media only screen and (max-width: 570px) {
-  .single-park-info-container {
-    display: flex;
-    width: 100vw;
-    margin-top: 0em;
-  }
-
-  .ally {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 23em;
-    height: 25em;
-    background-color: rgb(0, 33, 0);
-    color: white;
-    margin-top: 2em;
-  }
-
-  .ally h2 {
-    font-size: 1.5em;
-    font-family: 'Abel', sans-serif;
-    margin-bottom: 1em;
-  }
-
-  .ally p {
-    font-size: 0.75em;
-    margin-bottom: 1em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
-
-  .site {
-    font-size: 0.75em;
-    color: white;
-    margin: 1em;
-  }
-
-  .lets-adventure {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: white;
-    font-family: 'Abel', sans-serif;
-  }
-
-  .description {
-    font-size: 0.5em;
-    font-family: 'Aleo', sans-serif;
-    font-weight: 600;
-    line-height: 1.6em;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .home-container {
-    display: flex;
-    background: white;
-    width: 100%;
-    height: 100%;
-    background-image: none;
-  }
-
-  .ally {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 80%;
-    height: 100%;
-    background-color: rgb(0, 33, 0);
-    color: white;
-    margin-top: 2em;
-  }
-
-  .ally h2 {
-    font-size: 1.5em;
-    font-family: 'Abel', sans-serif;
-    margin-bottom: 0.1em;
-  }
-
-  .ally p {
-    font-size: 0.9em;
-    margin-top: 1em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
-
-  .site {
-    font-size: 0.75em;
-    color: white;
-  }
-
-  .lets-adventure {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: white;
-    font-family: 'Abel', sans-serif;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  .home-container {
-    display: flex;
-    background: white;
-    width: 100%;
-    height: 100%;
-    background-image: none;
-  }
-
-  .ally {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    width: 80%;
-    height: 100%;
-    background-color: rgb(0, 33, 0);
-    color: white;
-    margin-top: 2em;
-  }
-
-  .ally h2 {
-    font-size: 1.5em;
-    font-family: 'Abel', sans-serif;
-    margin-bottom: 0.1em;
-  }
-
-  .ally p {
-    font-size: 0.9em;
-    margin-top: 1em;
-    font-family: 'Abel', sans-serif;
-    overflow-wrap: break-word;
-  }
-
-  .site {
-    font-size: 0.75em;
-    color: white;
-  }
-
-  .lets-adventure {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: white;
-    font-family: 'Abel', sans-serif;
+    font-size: .8em;
   }
 }
