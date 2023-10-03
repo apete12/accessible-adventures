@@ -84,16 +84,6 @@ const SingleParkAccessibilityDetails = ({
   return (
     <div className='accessibility-container'>
       <h2>Park's Accessible Features</h2>
-      <div className='features-buttons-styling-container'>
-        <button className='favorite-park-btn' onClick={event => helperSavePark(selectedSinglePark)}>
-          {isParkFavorited
-            ? 'Remove from Favorites'
-            : '⭐️ Add Park to Favorites!'}
-        </button>
-        <div className='accessibility-support-styling-container'>
-          <h3>Need Additional Information? Checkout<Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support-link'>National Park Service Accessibility Support</Link></h3>
-        </div>
-      </div>
       <div className='features-styling-container'>
         {singleParkAccessibility.map((accessibility, index) => (
           <div className='feature-wrapper' key={index}>
@@ -106,6 +96,16 @@ const SingleParkAccessibilityDetails = ({
             </div>
           </div>
         ))}
+      </div>
+      <div className='features-buttons-styling-container'>
+        <button className='favorite-park-btn' onClick={event => helperSavePark(selectedSinglePark)}>
+          {isParkFavorited
+            ? 'Remove from Favorites'
+            : 'Add Park to Favorites!'}
+        </button>
+        <div className='accessibility-support-styling-container'>
+          <h3>Need Additional Information? Checkout<Link to={`https://www.nps.gov/aboutus/accessibility.htm`} className='accessibility-support-link'>National Park Service Accessibility Support</Link></h3>
+        </div>
       </div>
     </div>
   )

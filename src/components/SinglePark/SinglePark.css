@@ -14,12 +14,13 @@
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 50%;
+  margin-bottom: 3em;
+
 }
 
 .accessibility-details-container{
   display: flex;
   width: 90%;
-
 }

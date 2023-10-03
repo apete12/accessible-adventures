@@ -17,6 +17,7 @@ const SingleParkDetails = ({selectedSinglePark}) => {
           <h3>Key Details:</h3>
           <p>State(s): {selectedSinglePark.states}</p>
           <p>Designation: {selectedSinglePark.designation}</p>
+          <p className='park-hours'>Park Hours: {selectedSinglePark.hours}</p>
           <Link to={selectedSinglePark.url} className='park-website'>Check out the {selectedSinglePark.fullName} website.</Link>
         </div>
         <div className='park-description'>

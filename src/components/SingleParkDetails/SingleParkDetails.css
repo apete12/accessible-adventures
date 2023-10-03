@@ -17,7 +17,7 @@
   min-height: 100%;
   max-width: 100%;
 
-  opacity: 0.25;
+  opacity: 0.3;
 
   z-index: -1;
 }
@@ -32,9 +32,10 @@
 .details-container-two {
   display: flex;
   flex-direction: row;
-  width: 90%;
-  padding: 2em;
+  width: 100%;
+  height: auto;
   padding-top: 0;
+  background-color: rgba(255, 255, 255, 0.715);
 }
 
 .details-container-two  h3 {
@@ -76,6 +77,10 @@
   margin: 1em;
 }
 
+.park-hours {
+  display: flex;
+  padding-right: 4em;
+}
 
 /* @media only screen and (max-width: 1370px) {
   .single-park-info-container {

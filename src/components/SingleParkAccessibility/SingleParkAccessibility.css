@@ -6,7 +6,7 @@
   width: 100%;
   height: auto;
   border: solid 0.1em black;
-  background: rgba(0, 33, 0, 0.859);
+  background: rgba(0, 33, 0, 0.875);
   color: white;
   padding: 1em;
 }
@@ -23,6 +23,7 @@
   height: 30%;
   width: 100%;
   background: white;
+  margin-top: 1em;
 }
 
 .features-buttons-styling-container h3 {

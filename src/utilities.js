@@ -57,13 +57,16 @@ const filterAllParks = (accessibleParks, allParks) => {
 }
 
 const trimParkData = (allParks) => {
+  console.log(allParks)
   const reducedData = allParks.map(park => {
-      const { id, fullName, url, states, description, images, designation} = park;
+      const { id, fullName, url, states, description, images, designation, operatingHours} = park;
       const firstImage = images[0];
+      const hours = operatingHours[0].description;
       const imageUrl = firstImage?.url || '';
       const altText = firstImage?.altText || '';
+      console.log(hours)
       
-      return { id, fullName, url, states, description, images: { url: imageUrl, altText }, designation};
+      return { id, fullName, url, states, description, images: { url: imageUrl, altText }, designation, hours};
   });
   return reducedData;
 }

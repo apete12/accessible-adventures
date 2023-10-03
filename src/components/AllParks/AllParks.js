@@ -11,6 +11,7 @@ const AllParks = ({ allParks, selectSinglePark }) => {
         name={natPark.fullName}
         state={natPark.states}
         altText={natPark.images.altText}
+        hours={natPark.hours}
         image={natPark.images.url}
         selectSinglePark={selectSinglePark}
       />
