@@ -6,6 +6,8 @@
     height: 6.5em;
     width: 100%;
     padding: .5em;
+    position: fixed;
+    top: 0;
   }
 
   .title-wrapper{

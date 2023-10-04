@@ -1,5 +1,4 @@
-.favorites-heading-container,
-.no-favorites-message {
+.favorites-heading-container {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -9,16 +8,20 @@
   color: rgb(255, 252, 252);
   padding-top: 0.5em;
   font-family: 'Abel', sans-serif;
+  margin-top: 6.5em;
 }
 
-.favorite-parks-container {
+.no-favorites-message {
   display: flex;
   width: 100%;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 252, 252);
-  padding-top: 0.5em;
+}
+
+#no-favorites-message p {
+  font-size: 1.5em;
+  font-family: 'Abel', sans-serif;
+  color: black;
 }
 
 .all-favorite-parks-container {
@@ -28,29 +31,18 @@
   gap: 6rem;
 }
 
-.favorite-parks-container h2 {
+.all-favorite-parks-container h2 {
   display: flex;
   font-size: 2em;
   font-family: 'Aleo', sans-serif;
   color: rgb(255, 252, 252);
 }
 
-.favorite-parks-container p {
+.all-favorite-parks-container p {
   display: flex;
   font-size: 1.5em;
   font-family: 'Aleo', sans-serif;
   color: rgb(255, 252, 252);
-}
-
-.no-favorites-message {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgb(0, 33, 0);
-  color: rgb(255, 252, 252);
-  padding-top: 0.5em;
 }
 
 @media only screen and (max-width: 1370px) {

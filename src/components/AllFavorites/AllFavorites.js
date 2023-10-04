@@ -38,7 +38,7 @@ const AllFavorites = ({ savedParks, selectSinglePark, setSavedParks }) => {
            {parks}
           </div>
        ) : (
-         <div className='no-favorites-message'>
+         <div className='no-favorites-message' id='no-favorites-message'>
            <p>You don't have any saved parks!</p>
          </div>
       )}

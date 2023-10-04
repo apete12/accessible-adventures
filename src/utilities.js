@@ -57,7 +57,6 @@ const filterAllParks = (accessibleParks, allParks) => {
 }
 
 const trimParkData = (allParks) => {
-  console.log(allParks)
   const reducedData = allParks.map(park => {
       const { id, fullName, url, states, description, images, designation, operatingHours} = park;
       const firstImage = images[0];
