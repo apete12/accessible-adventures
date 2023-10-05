@@ -34,6 +34,7 @@
   font-weight: 600;
   margin-bottom: 0;
   text-align: center;
+  line-height: 1.6em;
 }
 
 .site {
@@ -56,13 +57,14 @@
   margin-top: 1em;
   color: black;
   font-family: 'Abel', sans-serif;
+  font-weight: bold;
 }
 
 .ally img {
   width: 8em;
   height: auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
 }
 
 @media only screen and (max-width: 1030px) {
@@ -71,19 +73,37 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 940px) {
+  /* .ally {
+    height: 100%;
+  } */
+  
   .ally h2 {
-    font-size: 1.75rem;
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* .ally {
+    height: 100%;
+  } */
+
+  .ally h2 {
+    font-size: 1.7rem;
   }
 }
 
 @media only screen and (max-width: 701px) {
+  /* .ally {
+    height: 100%;
+  } */
+
   .ally h2 {
     font-size: 1.5rem;
   }
 
   .ally p {
-    font-size: .8em;
+    font-size: 1em;
   }
 }
 
@@ -104,16 +124,17 @@
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: 60%;
-    margin-top: 1em;
+    height: auto;
+    margin-top: 5.5em;
   }
 
   .ally h2 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    margin-top: .8em;
   }
 
   .ally p {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .lets-adventure {
@@ -122,31 +143,50 @@
 }
 
 @media only screen and (max-width: 481px) {
+  .home-container {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .ally {
+    margin-bottom: 2em;
+  }
+
   .ally h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .ally p {
-    font-size: .6em;
+    font-size: 1em;
   }
 
   .lets-adventure {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 
 @media only screen and (max-width: 403px) {
+  .home-container {
+    background-image: none;
+    background: rgba(0, 33, 0, 0.875);
+    height: 100%;
+    margin-top: 5em;
+  }
+
+  .ally {
+    margin-bottom: 2em;
+  }
+
   .ally h2 {
-    font-size: .8rem;
+    font-size: 1.5rem;
   }
 
   .ally p {
-    font-size: .4em;
-    line-height: 2.5em;
-
+    font-size: 1em;
+    line-height: 2em;
   }
 
   .lets-adventure {
-    font-size: .8em;
+    font-size: 1.5em;
   }
 }

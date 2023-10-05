@@ -26,7 +26,6 @@ function App() {
 
   useEffect(() => {
     setError('')
-    console.log(location)
   }, [location])
   
   useEffect(() => {
@@ -55,11 +54,9 @@ function App() {
   const selectSinglePark = (parkFullName) => {
     let singlePark = allParks.find(park => park.fullName == parkFullName)
     setSelectedSinglePark(singlePark)
-    console.log(singlePark)
 
     let singleParkAmenities = accessibleFeatures[parkFullName]
     setSingleParkAccessibility(singleParkAmenities)
-    console.log(singleParkAmenities)
     setIsLoading(false)
   }
   

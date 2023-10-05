@@ -66,7 +66,6 @@ const SingleParkAccessibilityDetails = ({
     }
   }
 
-  console.log(savedParks)
   const isParkFavorited = savedParks.find(
     savedPark => savedPark.fullName === selectedSinglePark.fullName
   )

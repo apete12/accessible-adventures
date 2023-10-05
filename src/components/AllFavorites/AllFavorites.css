@@ -6,7 +6,7 @@
   align-items: center;
   background: rgb(0, 33, 0);
   color: rgb(255, 252, 252);
-  padding-top: 0.5em;
+  padding-top: 1.2em;
   font-family: 'Abel', sans-serif;
   margin-top: 6.5em;
 }
@@ -22,6 +22,8 @@
   font-size: 1.5em;
   font-family: 'Abel', sans-serif;
   color: black;
+  font-weight: bold;
+
 }
 
 .all-favorite-parks-container {
@@ -45,7 +47,7 @@
   color: rgb(255, 252, 252);
 }
 
-@media only screen and (max-width: 1370px) {
+/* @media only screen and (max-width: 1370px) {
   .favorite-parks-container {
     margin-top: 2em;
   }
@@ -57,9 +59,9 @@
     gap: 8rem;
     margin-top: 1em;
   }
-}
+} */
 
-@media only screen and (max-width: 1025px) {
+/* @media only screen and (max-width: 1025px) {
   .favorite-parks-container {
     margin-top: 2em;
   }
@@ -71,9 +73,9 @@
     gap: 3rem;
     margin-top: 1em;
   }
-}
+} */
 
-@media only screen and (max-width: 850px) {
+/* @media only screen and (max-width: 850px) {
   .favorite-parks-container {
     margin-top: 2em;
   }
@@ -85,9 +87,9 @@
     gap: 6rem;
     margin-top: 1em;
   }
-}
+} */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .favorite-parks-container {
     margin-top: 2em;
   }
@@ -99,9 +101,9 @@
     gap: 2rem;
     margin-top: 1em;
   }
-}
+} */
 
-@media only screen and (max-width: 530px) {
+/* @media only screen and (max-width: 530px) {
   .favorite-parks-container {
     margin-top: 2em;
   }
@@ -113,9 +115,9 @@
     gap: 5rem;
     margin-top: 1em;
   }
-}
+} */
 
-@media only screen and (max-width: 375px) {
+/* @media only screen and (max-width: 375px) {
 
   #all-favorite-parks-container {
     display: grid;
@@ -134,4 +136,4 @@
     font-size: .75em;
     font-family: 'Aleo', sans-serif;
   }
-}
+} */

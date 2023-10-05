@@ -57,6 +57,8 @@
   background: rgb(0, 33, 0);
   color: white;
   border-radius: .2em;
+  font-weight: bold;
+
 }
 
 .features-styling-container {
@@ -90,6 +92,8 @@
   font-family: 'Abel', sans-serif;
   font-size: 1.2em;
   margin-top: .15em;
+  font-weight: bold;
+
 }
 
 .styling-container-two {

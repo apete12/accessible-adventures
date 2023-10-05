@@ -63,7 +63,6 @@ const trimParkData = (allParks) => {
       const hours = operatingHours[0].description;
       const imageUrl = firstImage?.url || '';
       const altText = firstImage?.altText || '';
-      console.log(hours)
       
       return { id, fullName, url, states, description, images: { url: imageUrl, altText }, designation, hours};
   });
