@@ -25,14 +25,12 @@ describe('Test Single Park Details', () => {
       .should('contain', 'Acadia National Park')
     cy.get('[href="/national-parks/Acadia National Park"] > .park-card > .image-container > img').click()
     cy.url().should('eq', 'http://localhost:3000/national-parks/Acadia%20National%20Park')
-    cy.get('.single-park-container')
-    cy.get('.styling-container > h2')
+    cy.get('.details-container-one')
+    cy.get('h2')
     .should('contain', 'Acadia National Park')
-    cy.get('#park-image')
-    cy.get('.styling-container-two')
+    cy.get('.details-container-two')
     .should('contain', 'ME')
     .should('contain', 'National Park')
-    cy.get('.styling-container > p')
 
     cy.get('.accessibility-container')
     cy.get('.accessibility-container > h2')
@@ -46,7 +44,7 @@ describe('Test Single Park Details', () => {
 
     cy.get('.features-buttons-styling-container')
     cy.get('.favorite-park-btn')
-    cy.get('.accessibility-support')
+    cy.get('.accessibility-support-link')
 
   });
 
@@ -65,7 +63,7 @@ describe('Test Single Park Details', () => {
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
-    cy.get('.accessibility-support')
+    cy.get('.accessibility-support-link')
     cy.get('[href="https://www.nps.gov/aboutus/accessibility.htm"]')
   });
 
@@ -116,7 +114,7 @@ describe('Test Single Park Details', () => {
 
     cy.get('.accessibility-container')
     cy.get('.features-buttons-styling-container')
-    cy.get('.accessibility-support')
+    cy.get('.accessibility-support-link')
     
   });
 

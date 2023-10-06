@@ -42,7 +42,7 @@ describe('Test Home Page with All Parks', () => {
   it('should a11y definition with links to all parks', () => {
     cy.get('.ally')
     cy.get('.ally > h2')
-    .should('contain', '“a11y” stands for accessibility.')
+    .should('contain', 'a11y stands for accessibility.')
     
     cy.get('.lets-adventure').click()
     cy.url().should('eq', 'http://localhost:3000/national-parks')
