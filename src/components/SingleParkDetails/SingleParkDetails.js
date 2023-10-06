@@ -14,14 +14,18 @@ const SingleParkDetails = ({selectedSinglePark}) => {
       </div>
       <div className='details-container-two'>
         <div className='key-details'>
-          <h3>Key Details:</h3>
+          <div className='key-details-heading'>
+            <h3>Key Details:</h3>
+          </div>
           <p>State(s): {selectedSinglePark.states}</p>
           <p>Designation: {selectedSinglePark.designation}</p>
           <p className='park-hours'>Park Hours: {selectedSinglePark.hours}</p>
           <Link to={selectedSinglePark.url} className='park-website'>Check out the {selectedSinglePark.fullName} website.</Link>
         </div>
         <div className='park-description'>
-          <h3>Description:</h3>
+          <div className='park-description-heading'>
+            <h3>Description:</h3>
+          </div>
           <p>{selectedSinglePark.description}</p>
         </div>
       </div>
