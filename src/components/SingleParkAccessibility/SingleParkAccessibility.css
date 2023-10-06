@@ -57,7 +57,7 @@
   width: 15%;
   background: rgb(0, 33, 0);
   color: white;
-  border-radius: .2em;
+  border-radius: 0.2em;
   font-weight: bold;
 }
 
@@ -68,7 +68,7 @@
   grid-template-columns: repeat(3, 1fr);
   row-gap: 1em;
   font-size: 0.9rem;
-  width: 80%
+  width: 80%;
 }
 
 .feature-wrapper div {
@@ -91,9 +91,8 @@
   display: flex;
   font-family: 'Abel', sans-serif;
   font-size: 1.2em;
-  margin-top: .15em;
+  margin-top: 0.15em;
   font-weight: bold;
-
 }
 
 .styling-container-two {
@@ -110,7 +109,7 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1em;
     font-size: 0.9rem;
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -129,12 +128,11 @@
     flex-direction: column;
     height: auto;
     margin-top: 1.7em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 
     padding: 0;
   }
 }
-
 
 @media only screen and (max-width: 550px) {
   .features-styling-container {
@@ -144,7 +142,7 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1em;
     font-size: 0.9rem;
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -156,6 +154,6 @@
     grid-template-columns: repeat(1, 1fr);
     row-gap: 1em;
     font-size: 0.9rem;
-    width: 100%
+    width: 100%;
   }
 }

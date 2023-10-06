@@ -1,13 +1,12 @@
 .error-container {
-    display: flex;
-    flex-direction: column;
-    width: 100% vw;
-    justify-content: center;
-    align-items: center;
-    margin-top: 7em;
-
+  display: flex;
+  flex-direction: column;
+  width: 100% vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15em;
 }
 
 .ally-logo-loading {
-    width: 15em;
+  width: 15em;
 }

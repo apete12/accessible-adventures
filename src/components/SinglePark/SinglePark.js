@@ -3,17 +3,27 @@ import SingleParkDetails from '../SingleParkDetails/SingleParkDetails'
 import SingleParkAccessibilityDetails from '../SingleParkAccessibility/SingleParkAccessibility'
 // import PropTypes from 'prop-types'
 
-const SinglePark = ({selectedSinglePark, singleParkAccessibility, savedParks, setSavedParks}) => {
+const SinglePark = ({
+  selectedSinglePark,
+  singleParkAccessibility,
+  savedParks,
+  setSavedParks
+}) => {
   return (
     <div className='single-park-container' id='single-park-container'>
       <div className='park-details-container'>
-        <SingleParkDetails selectedSinglePark = {selectedSinglePark}/>
+        <SingleParkDetails selectedSinglePark={selectedSinglePark} />
       </div>
       <div className='accessibility-details-container'>
-        <SingleParkAccessibilityDetails singleParkAccessibility={singleParkAccessibility} selectedSinglePark = {selectedSinglePark} savedParks={savedParks} setSavedParks={setSavedParks}/>
+        <SingleParkAccessibilityDetails
+          singleParkAccessibility={singleParkAccessibility}
+          selectedSinglePark={selectedSinglePark}
+          savedParks={savedParks}
+          setSavedParks={setSavedParks}
+        />
       </div>
     </div>
-    )
+  )
 }
 
 export default SinglePark

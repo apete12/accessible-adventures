@@ -27,48 +27,70 @@ const filterAccessibleAmenities = amenityList => {
     },
     []
   )
-  let amenitiesByPark = accessibleAmenitiesList.reduce((parkList, amenityGroup) => {
-    amenityGroup.forEach(type => {
-      type.parks.forEach(park => {
-        if (park.designation === 'National Park' && !parkList[park.fullName]) {
-          parkList[park.fullName] = [];
-        }
+  let amenitiesByPark = accessibleAmenitiesList.reduce(
+    (parkList, amenityGroup) => {
+      amenityGroup.forEach(type => {
+        type.parks.forEach(park => {
+          if (
+            park.designation === 'National Park' &&
+            !parkList[park.fullName]
+          ) {
+            parkList[park.fullName] = []
+          }
 
-        if (parkList[park.fullName]) {
-          parkList[park.fullName].push(type);
-        }
-      });
-    });
+          if (parkList[park.fullName]) {
+            parkList[park.fullName].push(type)
+          }
+        })
+      })
 
-    return parkList;
-  }, {});
+      return parkList
+    },
+    {}
+  )
 
   return amenitiesByPark
-};
+}
 
 const filterAllParks = (accessibleParks, allParks) => {
-   let accessibleParksList = Object.keys(accessibleParks)
+  let accessibleParksList = Object.keys(accessibleParks)
 
-    const accessParks = allParks.filter((park) => {
-        return accessibleParksList.includes(park.fullName)
-    })
+  const accessParks = allParks.filter(park => {
+    return accessibleParksList.includes(park.fullName)
+  })
 
-    return accessParks
+  return accessParks
 }
 
-const trimParkData = (allParks) => {
+const trimParkData = allParks => {
   const reducedData = allParks.map(park => {
-      const { id, fullName, url, states, description, images, designation, operatingHours} = park;
-      const firstImage = images[0];
-      const hours = operatingHours[0].description;
-      const imageUrl = firstImage?.url || '';
-      const altText = firstImage?.altText || '';
-      
-      return { id, fullName, url, states, description, images: { url: imageUrl, altText }, designation, hours};
-  });
-  return reducedData;
+    const {
+      id,
+      fullName,
+      url,
+      states,
+      description,
+      images,
+      designation,
+      operatingHours
+    } = park
+    const firstImage = images[0]
+    const hours = operatingHours[0].description
+    const imageUrl = firstImage?.url || ''
+    const altText = firstImage?.altText || ''
+
+    return {
+      id,
+      fullName,
+      url,
+      states,
+      description,
+      images: { url: imageUrl, altText },
+      designation,
+      hours
+    }
+  })
+  return reducedData
 }
-
-
 
 export { filterAccessibleAmenities, filterAllParks, trimParkData }

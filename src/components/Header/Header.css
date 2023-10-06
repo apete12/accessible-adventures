@@ -1,685 +1,669 @@
 .header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: black 0.1em solid;
+  height: 6.5em;
+  width: 100%;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 1.75em;
+  width: 100%;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ally-logo {
+  display: flex;
+  height: 6rem;
+}
+
+.header h1 {
+  display: flex;
+  font-size: 2em;
+  font-family: 'Aleo', sans-serif;
+}
+
+.return-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.5em;
+  width: 100%;
+  height: 3em;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 8em;
+  font-family: 'Aleo', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.active {
+  background: black;
+  color: rgb(255, 252, 252);
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1165px) {
+  .header h1 {
+    display: flex;
+    font-size: 2em;
+    font-family: 'Aleo', sans-serif;
+    padding-left: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  #return-btn-container {
     display: flex;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-bottom: black .1em solid;
-    height: 6.5em;
+    padding: 1em;
+    background: white;
     width: 100%;
-    padding: .5em;
-    position: fixed;
-    top: 0;
+    height: 3em;
+    font-size: 1.2em;
   }
 
-  .title-wrapper{
+  .header h1 {
+    display: flex;
+    font-size: 2em;
+    font-family: 'Aleo', sans-serif;
+    padding-left: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .header {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    padding-left: 1.75em;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 7em;
     width: 100%;
+    margin: 0px;
+  }
+
+  .header h1 {
+    display: flex;
+    font-size: 2em;
+    font-family: 'Aleo', sans-serif;
+    padding-left: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .ally-logo {
+    display: flex;
+    height: 4rem;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 8em;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .header h1 {
+    display: flex;
+    font-size: 1.3em;
+    font-family: 'Aleo', sans-serif;
+    padding-left: 0.5em;
+    margin-top: 1em;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 30%;
+    height: 100%;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 8em;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 5em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.9em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 7em;
+    font-family: 'Aleo', sans-serif;
+    font-weight: 400px;
+    font-size: 0.9em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
   }
 
   .nav-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 100%;
+    width: 65%;
+    padding-right: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 30%;
+    margin-right: 1em;
+    padding-top: 1em;
   }
 
-  .ally-logo{
+  .ally-logo {
     display: flex;
-    height: 6rem;
+    height: 4rem;
+    margin-bottom: 0.5em;
   }
-  
+
   .header h1 {
     display: flex;
-    font-size: 2em;
+    font-size: 1em;
     font-family: 'Aleo', sans-serif;
+    padding-top: 1.5em;
+    margin: 0;
   }
-  
-  .return-btn-container{
+
+  #return-btn-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left: .5em;
+    background: white;
     width: 100%;
-    height: 3em;
+    height: 100%;
   }
 
   .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2em;
-    width: 8em;
     font-family: 'Aleo', sans-serif;
-    font-size: 1em;
-    font-weight: 600;
     cursor: pointer;
-    color: black;
     margin-right: 1em;
     margin-left: 1em;
+    padding: 0.5em;
   }
 
-  .active {
-    background:black;
-    color: rgb(255, 252, 252);
-    height: 75%;
+  .nav-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    width: 65%;
   }
 
-  @media only screen and (max-width: 1165px) {
-    .header h1 {
-      display: flex;
-      font-size: 2em;
-      font-family: 'Aleo', sans-serif;
-      padding-left: .5em;
-    }
-  } 
-  
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 5em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.75em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
 
-  @media only screen and (max-width: 1130px) {
-    #return-btn-container{
-      display: flex;
-      align-items: center;
-      padding: 1em;
-      background: white;
-      width: 100%;
-      height: 3em;
-      font-size: 1.2em;
-    }
-
-    .header h1 {
-      display: flex;
-      font-size: 2em;
-      font-family: 'Aleo', sans-serif;
-      padding-left: .5em;
-    }
-  } 
-
-
-  @media only screen and (max-width: 1025px) {
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 7em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    .header h1 {
-      display: flex;
-      font-size: 2em;
-      font-family: 'Aleo', sans-serif;
-      padding-left: .5em;
-    }
-  } 
-
-  @media only screen and (max-width: 940px) {
-    .ally-logo{
-      display: flex;
-      height: 4rem;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 8em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    .header h1 {
-      display: flex;
-      font-size: 1.3em;
-      font-family: 'Aleo', sans-serif;
-      padding-left: .5em;
-      margin-top: 1em;
-    }
-
-    .title-wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 30%;
-      height: 100%;
-      margin-right: 1em;
-    }
-  } 
-
-  @media only screen and (max-width: 870px) {
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 8em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 5em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .9em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 7em;
-      font-family: 'Aleo', sans-serif;
-      font-weight: 400px;
-      font-size: .9em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-      padding-right: 1.3em;
-    }
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 7em;
+    font-family: 'Aleo', sans-serif;
+    font-weight: 400px;
+    font-size: 0.75em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
 }
 
-
-  @media only screen and (max-width: 610px) {
-    .title-wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 30%;
-      margin-right: 1em;
-      padding-top: 1em;
-    }
-
-    .ally-logo{
-      display: flex;
-      height: 4rem;
-      margin-bottom: .5em;
-    }
-    
-    .header h1 {
-      display: flex;
-      font-size: 1em;
-      font-family: 'Aleo', sans-serif;
-      padding-top: 1.5em;
-      margin: 0;
-    }
-
-    #return-btn-container{
-      display: flex;
-      align-items: center;
-      background: white;
-      width: 100%;
-      height: 100%;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Aleo', sans-serif;
-      cursor: pointer;
-      margin-right: 1em;
-      margin-left: 1em;
-      padding:  .5em;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 5em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .75em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 7em;
-      font-family: 'Aleo', sans-serif;
-      font-weight: 400px;
-      font-size: .75em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-    }
-  
+@media only screen and (max-width: 500px) {
+  .ally-logo {
+    display: flex;
+    height: 3rem;
+    margin: 0px;
+    padding: 0px;
   }
 
-  @media only screen and (max-width: 500px) {
-    .ally-logo{
-      display: flex;
-      height: 3rem;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    .header h1{
-      display: flex;
-      align-items: center;
-      font-size: .8em;
-      padding-top: 1.3em;
-      padding-left: 0;
-      margin: 0em;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 5em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .7em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 7em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .7em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-    }
-  
-  }
-  
-  @media only screen and (max-width: 440px) {
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 8em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    #return-btn-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1em;
-      background: white;
-      width: 100%;
-      height: 3em;
-      font-size: 1em;
-    }
-
-    .ally-logo{
-      display: flex;
-      height: 2rem;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    #return-btn-container{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-size: .7em;
-    }
-
-    .title-wrapper{
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 30%;
-      margin-right: 1em;
-    }
-
-    .header h1{
-      display: flex;
-      align-items: center;
-      font-size: .8em;
-      padding-top: .5em;
-      margin: 0em;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 5em;
-      font-family: 'Aleo', sans-serif;
-      font-size: 1em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 7em;
-      font-family: 'Aleo', sans-serif;
-      font-size: 1em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-    }
-  
+  .header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    padding-top: 1.3em;
+    padding-left: 0;
+    margin: 0em;
   }
 
-  @media only screen and (max-width: 370px) {
-    .ally-logo{
-      display: flex;
-      height: 2rem;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 5em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    #return-btn-container{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-size: .7em;
-    }
-
-    .title-wrapper {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 35%;
-      margin-right: 1em;
-    }
-
-    .title-container h1{
-      display: flex;
-      align-items: center;
-      font-size: .1em;
-      padding-left: .8em;
-      margin: 0px;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 4em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .5em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2em;
-      width: 7em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .5em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: 0;
-    }
-  
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 5em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.7em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
   }
 
-  @media only screen and (max-width: 375px) {
-    .ally-logo{
-      display: flex;
-      height: 2rem;
-      margin: 0px;
-      padding: 0px;
-    }
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 7em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.7em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+}
 
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 5em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    #return-btn-container{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-size: .7em;
-    }
-
-    .title-wrapper{
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 25%;
-      margin-right: 0em;
-    }
-
-    .title-container h1{
-      display: flex;
-      align-items: center;
-      font-size: .1em;
-      padding-left: .8em;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-      height: 65%;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 6em;
-      width: 10em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .4em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: .5em;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 6em;
-      width: 15em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .4em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: .5em;
-    }
-  
+@media only screen and (max-width: 440px) {
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 8em;
+    width: 100%;
+    margin: 0px;
   }
 
-  @media only screen and (max-width: 375px) {
-    .ally-logo{
-      display: flex;
-      height: 2rem;
-      padding: 0px;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-bottom: black .1em solid;
-      height: 5em;
-      width: 100%;
-      margin: 0px;
-    }
-
-    #return-btn-container{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .title-wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: column;
-      padding-left: 0em;
-      width: 25%;
-      margin-right: 0em;
-    }
-
-    .title-container h1{
-      display: flex;
-      align-items: center;
-      font-size: .04em;
-      padding-left: .8em;
-      margin-top: -2.5em;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 65%;
-      height: 65%;
-    }
-
-    #return-home-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 18em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .2em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: .5em;
-
-    }
-
-    #view-favorites-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3em;
-      width: 28em;
-      font-family: 'Aleo', sans-serif;
-      font-size: .2em;
-      margin: 0em;
-      cursor: pointer;
-      margin-right: 0em;
-      padding: .5em;
-    }
-  
+  #return-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background: white;
+    width: 100%;
+    height: 3em;
+    font-size: 1em;
   }
+
+  .ally-logo {
+    display: flex;
+    height: 2rem;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #return-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.7em;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 30%;
+    margin-right: 1em;
+  }
+
+  .header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    padding-top: 0.5em;
+    margin: 0em;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 65%;
+  }
+
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 5em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 7em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 1em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .ally-logo {
+    display: flex;
+    height: 2rem;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 5em;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #return-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.7em;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 35%;
+    margin-right: 1em;
+  }
+
+  .title-container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.1em;
+    padding-left: 0.8em;
+    margin: 0px;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 65%;
+  }
+
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 4em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.5em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 7em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.5em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .ally-logo {
+    display: flex;
+    height: 2rem;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 5em;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #return-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.7em;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 25%;
+    margin-right: 0em;
+  }
+
+  .title-container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.1em;
+    padding-left: 0.8em;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 65%;
+    height: 65%;
+  }
+
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    width: 10em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.4em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0.5em;
+  }
+
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    width: 15em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.4em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .ally-logo {
+    display: flex;
+    height: 2rem;
+    padding: 0px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: black 0.1em solid;
+    height: 5em;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #return-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 0em;
+    width: 25%;
+    margin-right: 0em;
+  }
+
+  .title-container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 0.04em;
+    padding-left: 0.8em;
+    margin-top: -2.5em;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 65%;
+    height: 65%;
+  }
+
+  #return-home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 18em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.2em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0.5em;
+  }
+
+  #view-favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 28em;
+    font-family: 'Aleo', sans-serif;
+    font-size: 0.2em;
+    margin: 0em;
+    cursor: pointer;
+    margin-right: 0em;
+    padding: 0.5em;
+  }
+}

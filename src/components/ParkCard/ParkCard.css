@@ -13,16 +13,16 @@
   font-family: 'Abel', sans-serif;
   color: rgb(245, 239, 239);
   margin: 0px;
-  padding: .4em;
+  padding: 0.4em;
 }
 
 .park-card h3 {
   display: flex;
-  font-size: .87em;
+  font-size: 0.87em;
   font-family: 'Abel', sans-serif;
   color: rgb(245, 239, 239);
   margin: 0px;
-  padding: .4em;
+  padding: 0.4em;
 }
 
 .image-container {

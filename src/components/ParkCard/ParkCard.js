@@ -1,21 +1,23 @@
 import './ParkCard.css'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-const ParkCard = (props) => {
-
-return (
- <Link to={`/national-parks/${props.name}`} onClick={() => props.selectSinglePark(props.name)}>
-    <div className='park-card' key={props.id} >
-      <div className='image-container'>
-        <img src={props.image} alt={props.altText}/>
+const ParkCard = props => {
+  return (
+    <Link
+      to={`/national-parks/${props.name}`}
+      onClick={() => props.selectSinglePark(props.name)}
+    >
+      <div className='park-card' key={props.id}>
+        <div className='image-container'>
+          <img src={props.image} alt={props.altText} />
+        </div>
+        <div className='info-container'>
+          <h2>{props.name}</h2>
+          <h3>{props.state}</h3>
+        </div>
       </div>
-      <div className='info-container'>
-        <h2>{props.name}</h2>
-        <h3>{props.state}</h3>
-      </div>
-    </div>
-  </Link>
+    </Link>
   )
 }
 

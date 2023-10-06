@@ -42,6 +42,8 @@
   font-size: 1.5em;
   font-family: 'Abel', sans-serif;
   margin-bottom: 0.2em;
+  margin-top: 0.2em;
+
 }
 
 .details-container-two p {
@@ -52,7 +54,7 @@
   line-height: 1.7em;
 }
 
-.key-details-heading, 
+.key-details-heading,
 .park-description-heading {
   display: flex;
   width: 99%;
@@ -81,12 +83,13 @@
   width: 45%;
 }
 
-
 .key-details p {
   margin: 1em;
 }
 
 .park-website {
+  display: flex;
+  justify-content: center;
   font-family: 'Abel', sans-serif;
   color: black;
   margin: 1em;
@@ -123,10 +126,10 @@
     width: 96%;
   }
 
-.key-details-heading, 
-.park-description-heading {
-  width: 100%;
-}
+  .key-details-heading,
+  .park-description-heading {
+    width: 100%;
+  }
 
   .park-website {
     font-size: 1.2em;
