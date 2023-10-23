@@ -144,6 +144,16 @@
     font-size: 0.9rem;
     width: 100%;
   }
+
+  .accessibility-support-styling-container h3{
+    font-size: 1rem;
+  }
+
+  .accessibility-support-link{
+    margin-top: .5em;
+    font-size: 1rem;
+  }
+
 }
 
 @media only screen and (max-width: 350px) {
@@ -156,4 +166,20 @@
     font-size: 0.9rem;
     width: 100%;
   }
+
+  .accessibility-support-styling-container {
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: 1em;
+  }
+
+  .accessibility-support-styling-container h3{
+    font-size: 1rem;
+  }
+
+  .accessibility-support-link{
+    margin-top: 1em;
+    font-size: 1rem;
+  }
 }
+
