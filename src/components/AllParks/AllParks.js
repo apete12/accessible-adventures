@@ -20,7 +20,7 @@ const AllParks = ({ allParks, selectSinglePark }) => {
   return (
     <>
       <div className='all-parks-header-container'>
-        <h2>a11y National Parks</h2>
+        <h2>A11Y National Parks</h2>
         <p>
           These National Parks have amenities related to accessibility. Happy
           adventuring!

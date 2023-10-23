@@ -18,7 +18,7 @@ const Header = ({ returnAllParks }) => {
           </Link>
         </div>
         <div className='title-container'>
-          <h1>a11y adventures</h1>
+          <h1>A11Y Adventures</h1>
         </div>
       </div>
       <div className='nav-wrapper'>

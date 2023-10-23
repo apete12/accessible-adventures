@@ -22,15 +22,15 @@ const Home = () => {
 
         <img className='ally-logo' src={logo} alt='' />
         <p className='description'>
-          a11y adventures was developed on the foundation of accessibility and
-          inclusivity. Leveraging the National Park API, a11y adventures
+          A11Y Adventures was developed on the foundation of accessibility and
+          inclusivity. Leveraging the National Park API, A11Y Adventures
           provides a platform to review and explore National Parks across the
-          United States that offer accessible amenities. a11y adventures aims to
+          United States that offer accessible amenities. A11Y Adventures aims to
           provide park goers with as much information as possible in order to
           facilitate an enjoyable, safe, and accessible adventure.
         </p>
         <Link to={'/national-parks'} className='lets-adventure'>
-          Start Your a11y adventure
+          Start Your A11Y Adventure!
         </Link>
       </div>
     </div>

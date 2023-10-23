@@ -14,7 +14,7 @@ describe('Test Home Page with All Parks', () => {
   it('should display header', () => {
     cy.get('.title-wrapper')
     cy.get('h1')
-      .should('contain', 'a11y adventures')
+      .should('contain', 'A11Y Adventures')
   });
 
   it('should display nav bar', () => {
