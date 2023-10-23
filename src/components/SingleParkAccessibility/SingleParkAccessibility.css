@@ -78,6 +78,7 @@
   flex-direction: column;
   width: 100%;
   margin: 0px;
+  text-align: center;
 }
 
 .features-styling-container img {
@@ -145,6 +146,12 @@
     width: 100%;
   }
 
+  .accessibility-support-styling-container {
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: 1.5em;
+  }
+
   .accessibility-support-styling-container h3{
     font-size: 1rem;
   }
@@ -170,7 +177,7 @@
   .accessibility-support-styling-container {
     padding-left: .5em;
     padding-right: .5em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
   }
 
   .accessibility-support-styling-container h3{
