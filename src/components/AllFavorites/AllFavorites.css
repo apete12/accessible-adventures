@@ -46,6 +46,123 @@
   color: rgb(255, 252, 252);
 }
 
+@media only screen and (max-width: 1400px) {
+  #all-favorite-parks-container  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  #all-favorite-parks-container  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .favorites-heading-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 33, 0);
+    color: rgb(255, 252, 252);
+    padding-top: 1.2em;
+    font-family: 'Abel', sans-serif;
+    margin-top: 7.5em;
+  }
+
+  .all-favorite-parks-container {
+    margin-top: 2em;
+  }
+
+  .all-favorite-parks-container h2 {
+    margin-top: 9em;
+  }
+
+  .all-favorite-parks-container p {
+    font-size: 1.4em;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  #all-favorite-parks-container  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #all-favorite-parks-container  {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .all-favorite-parks-container p {
+    font-size: 1.5em;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .all-favorite-parks-container  {
+    margin-top: 2em;
+  }
+
+  .all-favorite-parks-container p {
+    font-size: 1.3em;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .favorites-heading-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 33, 0);
+    color: rgb(255, 252, 252);
+    padding-top: 1.2em;
+    font-family: 'Abel', sans-serif;
+    margin-top: 5em;
+  }
+
+  .all-parks-header-container {
+    margin-top: 6em;
+  }
+
+  .all-favorite-parks-container p {
+    font-size: 1em;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
 /* @media only screen and (max-width: 1370px) {
   .favorite-parks-container {
     margin-top: 2em;

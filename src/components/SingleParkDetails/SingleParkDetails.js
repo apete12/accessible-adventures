@@ -1,7 +1,6 @@
 import './SingleParkDetails.css'
 
 import { Link } from 'react-router-dom'
-// import PropTypes from 'prop-types'
 
 const SingleParkDetails = ({ selectedSinglePark }) => {
   return (
@@ -40,18 +39,3 @@ const SingleParkDetails = ({ selectedSinglePark }) => {
 }
 
 export default SingleParkDetails
-
-// SinglePark.propTypes = {
-//   selectedSinglePark: PropTypes.objectOf(
-//     PropTypes.shape({
-//       id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-//       fullName: PropTypes.string.isRequired,
-//       states: PropTypes.string.isRequired,
-//       designation: PropTypes.string,
-//       images: PropTypes.shape({
-//         altText: PropTypes.string.isRequired,
-//         url: PropTypes.string.isRequired
-//       })
-//     })
-//   )
-// }
