@@ -40,10 +40,10 @@ See the deployed project [here](https://accessible-adventures.vercel.app/)
   
   | Description | Screenshot |
   |------------ | -----------|
-  | <h3 align="center">Home Page | ![all-parks-view](https://github.com/apete12/accessible-adventures/assets/104571445/de2d57d8-9633-4d57-afae-06ee09d51fff)
-  | <h3 align="center">Individual Add/Delete Park | ![favorite-parks](https://github.com/apete12/accessible-adventures/assets/104571445/22176e50-10a8-4a8b-b556-1962b862172e)
-   | <h3 align="center">Park Details | ![single-park-details](https://github.com/apete12/accessible-adventures/assets/104571445/2937d2d8-951e-46ba-b443-82cab5bd45de)
-
+  | <h3 align="center">Home Page | <img width="1420" alt="" src="https://github.com/apete12/accessible-adventures/assets/104571445/2f8b4f52-e091-4931-b4ce-8290b36712b5">
+  | <h3 align="center">All Parks Page | <img width="1422" alt="" src="https://github.com/apete12/accessible-adventures/assets/104571445/455afa31-0439-416d-963f-485a572a5f30">
+  | <h3 align="center">Individual Favorite/Unfavorite Park | <img width="1434" alt="" src="https://github.com/apete12/accessible-adventures/assets/104571445/2fcbd484-f1ba-4e54-b72f-ddaba4be314c">
+   | <h3 align="center">Park Details | <img width="1420" alt="" src="https://github.com/apete12/accessible-adventures/assets/104571445/8278b4fa-799e-443d-8be0-f789ba0159c7"> <img width="1416" alt="" src="https://github.com/apete12/accessible-adventures/assets/104571445/6716cf0d-1185-4f3b-8c50-c8ad544f8b70">
   
 
 </details>
@@ -56,8 +56,6 @@ See the deployed project [here](https://accessible-adventures.vercel.app/)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 ![Cypress](https://img.shields.io/badge/-Cypress-05122A?style=flat&logo=cypress)
 ![React Router](https://img.shields.io/badge/-React_Router-05122A?style=flat&logo=reactrouter)
-![Cypress](https://img.shields.io/badge/-Express.js-05122A?style=flat&logo=expressjs)
-
 
 ## 🧘‍♂️ Reflections
 <details open>
